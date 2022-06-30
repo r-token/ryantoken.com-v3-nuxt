@@ -1,7 +1,10 @@
 ---
-title: Second Post
-date: 2022-06-28
-cover: /content/blog/second-post/cover.png
+title: My second blog post
+image: second-post.jpg
+tags:
+  - Front-end
+  - Programming
+  - Career
 ---
 
 This is my second blog post using Nuxt 3 and Nuxt Content

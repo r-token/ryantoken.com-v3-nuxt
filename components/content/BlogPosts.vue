@@ -1,5 +1,4 @@
 <template>
-  <h1>Blog</h1>
   <ul>
     <li v-for="{ _path: slug, title } in blogPosts" :key="slug">
       <NuxtLink :to="slug">{{ title }}</NuxtLink>
