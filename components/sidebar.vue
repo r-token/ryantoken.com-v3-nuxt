@@ -39,12 +39,12 @@
               X
             </button>
             <div class="text-2xl font-bold flex items-center px-6 pt-8 pb-4">
-              <NuxtLink to="/">Ryan Token</NuxtLink>
+              <NuxtLink @click="toggleSidebar" to="/">Ryan Token</NuxtLink>
             </div>
 
             <div class="overflow-y-auto flex-1">
               <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
-                <NuxtLink :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600">{{navItem.label}}</NuxtLink>
+                <NuxtLink @click="toggleSidebar" :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600">{{navItem.label}}</NuxtLink>
               </div>
             </div>
           </div>
