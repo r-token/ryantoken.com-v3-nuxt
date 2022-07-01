@@ -6,6 +6,7 @@
     {href: '/about', label: 'About'},
     {href: '/projects', label: 'Projects'},
     {href: '/meta', label: 'Meta'},
+    {href: '/experimentation', label: 'Experimentation'},
   ])
 
   defineProps({

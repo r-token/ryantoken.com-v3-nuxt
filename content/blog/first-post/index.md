@@ -7,4 +7,4 @@ tags:
   - Career
 ---
 
-This is my first blog post using Nuxt 3 and Nuxt Content
+# This is my first blog post using Nuxt 3 and Nuxt Content
