@@ -1,8 +1,13 @@
+<script setup>
+  const sidebarOpened = ref(false)
+  const toggleSidebar = (newState) => sidebarOpened.value = newState
+</script>
+
 <template>
   <div class="flex min-h-screen">
-    <Sidebar />
+    <Sidebar :sidebarOpened="sidebarOpened" @toggleSidebar="toggleSidebar($event)" />
     <div class="flex-1">
-      <div class="flex justify-between py-3 px-6 bg-gray-50 border-b space-x-6">Ryan Token</div>
+      <Topbar @toggleSidebar="toggleSidebar($event)" />
       <main class="p-4">
         <slot />
       </main>
