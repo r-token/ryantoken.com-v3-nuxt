@@ -1,5 +1,6 @@
 <script setup>
   import { TransitionRoot, TransitionChild, Dialog, DialogOverlay } from '@headlessui/vue'
+  import IconShowSidebar from '~icons/zondicons/show-sidebar'
 
   const mainNavigation = ref([
     {href: '/blog', label: 'Blog'},
@@ -33,11 +34,11 @@
           <div class="flex flex-col md:hidden relative z-10 h-full w-72 w-64 pt-1 bg-gray-50 border-r border-gray-200">
             <button 
               @click="toggleSidebar"
-              class="absolute top-2 right-2 flex items-center justify-center w-10 h-10 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-600"
+              class="absolute top-2 right-2 flex items-center justify-center w-10 h-10 rounded-full focus:outline-none"
               type="button"
               value="Close Sidebar"
             >
-              X
+              <icon-show-sidebar />
             </button>
             <div class="text-2xl font-bold flex items-center px-6 pt-8 pb-4">
               <NuxtLink @click="toggleSidebar" to="/">Ryan Token</NuxtLink>

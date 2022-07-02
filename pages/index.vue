@@ -12,7 +12,9 @@ const recentBlogPosts = await queryContent('/blog')
 
     <ul>
       <li v-for="{ _path: slug, title } in recentBlogPosts" :key="slug">
-        <NuxtLink :to="slug">{{ title }}</NuxtLink>
+        <NuxtLink :to="slug">
+          <BlogPreview title="title" />
+        </NuxtLink>
       </li>
     </ul>
   </div>

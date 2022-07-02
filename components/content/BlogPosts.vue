@@ -11,7 +11,9 @@
 
     <ul>
       <li v-for="{ _path: slug, title } in allBlogPosts" :key="slug">
-        <NuxtLink :to="slug">{{ title }}</NuxtLink>
+        <NuxtLink :to="slug">
+          <BlogPreview :title="title" />
+        </NuxtLink>
       </li>
     </ul>
   </div>
