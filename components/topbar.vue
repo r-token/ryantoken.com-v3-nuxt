@@ -17,7 +17,7 @@
         <icon-show-sidebar />
       </button>
 
-      Ryan Token
+      <NuxtLink to="/">Ryan Token</NuxtLink>
     </div>
   </div>
 </template>

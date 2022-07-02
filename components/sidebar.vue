@@ -1,18 +1,24 @@
 <script setup>
   import { TransitionRoot, TransitionChild, Dialog, DialogOverlay } from '@headlessui/vue'
   import IconShowSidebar from '~icons/zondicons/show-sidebar'
+  import IconBlog from '~icons/jam/write-f'
+  import IconProfile from '~icons/iconoir/profile-circled'
+  import IconProjects from '~icons/material-symbols/rocket-launch'
+  import IconMeta from '~icons/octicon/stack-24'
+  import IconExperimentation from '~icons/icon-park-solid/experiment-one'
 
   const mainNavigation = ref([
-    {href: '/blog', label: 'Blog'},
-    {href: '/about', label: 'About'},
-    {href: '/projects', label: 'Projects'},
-    {href: '/meta', label: 'Meta'},
-    {href: '/experimentation', label: 'Experimentation'},
+    { href: '/blog', label: 'Blog', icon: 'icon-blog' },
+    { href: '/about', label: 'About' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/meta', label: 'Meta' },
+    { href: '/experimentation', label: 'Experimentation' },
   ])
 
   defineProps({
     sidebarOpened: Boolean
   })
+
   const emit = defineEmits(["toggleSidebar"])
   const toggleSidebar = () => emit("toggleSidebar", false)
 </script>
@@ -40,13 +46,34 @@
             >
               <icon-show-sidebar />
             </button>
-            <div class="text-2xl font-bold flex items-center px-6 pt-12 pb-2">
+            <div class="text-2xl font-bold flex items-center px-6 pt-16 pb-2">
               <NuxtLink @click="toggleSidebar" to="/">Ryan Token</NuxtLink>
             </div>
 
             <div class="overflow-y-auto flex-1">
               <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
-                <NuxtLink @click="toggleSidebar" :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600">{{navItem.label}}</NuxtLink>
+                <NuxtLink @click="toggleSidebar" :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600">
+                  <div class="mr-3">
+                    <div v-if="navItem.label === 'Blog'">
+                      <icon-blog />
+                    </div>
+                    <div v-else-if="navItem.label === 'About'">
+                      <icon-profile />
+                    </div>
+                    <div v-else-if="navItem.label === 'Projects'">
+                      <icon-projects />
+                    </div>
+                    <div v-else-if="navItem.label === 'Meta'">
+                      <icon-meta />
+                    </div>
+                    <div v-else-if="navItem.label === 'Experimentation'">
+                      <icon-experimentation />
+                    </div>
+                  </div>
+                  <div>
+                    {{navItem.label}}
+                  </div>
+                </NuxtLink>
               </div>
             </div>
           </div>
@@ -73,7 +100,28 @@
       </div>
 
       <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
-        <NuxtLink :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600">{{navItem.label}}</NuxtLink>
+        <NuxtLink :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600">
+          <div class="mr-3">
+            <div v-if="navItem.label === 'Blog'">
+              <icon-blog />
+            </div>
+            <div v-else-if="navItem.label === 'About'">
+              <icon-profile />
+            </div>
+            <div v-else-if="navItem.label === 'Projects'">
+              <icon-projects />
+            </div>
+            <div v-else-if="navItem.label === 'Meta'">
+              <icon-meta />
+            </div>
+            <div v-else-if="navItem.label === 'Experimentation'">
+              <icon-experimentation />
+            </div>
+          </div>
+          <div>
+            {{navItem.label}}
+          </div>
+        </NuxtLink>
       </div>
     </div>
   </div>
