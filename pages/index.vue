@@ -13,11 +13,12 @@ const recentBlogPosts = await queryContent('/blog')
     <h1 class="text-xl font-bold mb-5">Latest blog posts</h1>
 
     <ul>
-      <li v-for="{ _path: slug, title } in recentBlogPosts" :key="slug">
+      <li v-for="{ _path: slug, title, description, image, imageAlt, tags } in recentBlogPosts" :key="slug">
         <NuxtLink :to="slug">
-          <BlogPreview title="title" />
+          <BlogPreview :title="title" :description="description" :image="image" :imageAlt="imageAlt" :tags="tags" />
         </NuxtLink>
       </li>
     </ul>
   </div>
 </template>
+

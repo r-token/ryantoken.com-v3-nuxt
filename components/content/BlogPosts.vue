@@ -10,9 +10,9 @@
     <h1 class="text-xl font-bold mb-5">All blog posts</h1>
 
     <ul>
-      <li v-for="{ _path: slug, title } in allBlogPosts" :key="slug">
+      <li v-for="{ _path: slug, title, description, image, imageAlt, tags } in allBlogPosts" :key="slug">
         <NuxtLink :to="slug">
-          <BlogPreview :title="title" />
+          <BlogPreview :title="title" :description="description" :image="image" :imageAlt="imageAlt" :tags="tags" />
         </NuxtLink>
       </li>
     </ul>
