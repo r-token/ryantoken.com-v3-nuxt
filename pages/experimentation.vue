@@ -1,5 +1,5 @@
 <template>
   <div>
-    Experimentation page
+    <h1 class="text-xl font-bold mb-5">Experimentation page</h1>
   </div>
 </template>

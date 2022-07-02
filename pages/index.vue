@@ -8,6 +8,8 @@ const recentBlogPosts = await queryContent('/blog')
 
 <template>
   <div>
+    <h1 class="text-2xl font-bold mb-5">Hi there!</h1>
+
     <h1 class="text-xl font-bold mb-5">Latest blog posts</h1>
 
     <ul>
