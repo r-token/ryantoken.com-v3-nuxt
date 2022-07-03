@@ -7,7 +7,7 @@
 
 <template>
   <div>
-    <h1 class="text-xl font-bold mb-5">All blog posts</h1>
+    <Header text="Blog"/>
 
     <ul class="grid gap-6 grid-cols-1 xl:grid-cols-2">
       <li v-for="{ _path: slug, title, description, date, image, imageAlt, tags } in allBlogPosts" :key="slug">

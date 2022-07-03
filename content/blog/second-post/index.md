@@ -2,7 +2,7 @@
 title: My second blog post
 description: A sample second blog post description for testing
 date: 2022-06-21
-image: /img/career.jpeg
+image: /blog-images/joining-storyboard/career.jpeg
 imageAlt: An image of a man climbing the corporate ladder
 tags:
   - career

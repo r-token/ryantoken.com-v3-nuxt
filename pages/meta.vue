@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1 class="text-xl font-bold mb-5">Meta page</h1>
+    <Header text="Meta"/>
   </div>
 </template>

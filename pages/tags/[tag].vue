@@ -5,11 +5,16 @@
     .sort({ date: -1 }) // show latest articles first
     .where({ tags: { $contains: route.params.tag } }) // blog post contains the specific tag frontmatter
     .find()
+
+  const headerText = computed(() => {
+    const tag = route.params.tag
+    return `Blog posts tagged with ${tag}`
+  })
 </script>
 
 <template>
   <div>
-    <h1 class="text-xl font-bold mb-5">Blog posts tagged with {{route.params.tag}}</h1>
+    <Header :text="headerText"/>
 
     <ul class="mb-10">
       <li v-for="{ _path: slug, title, description, date, image, imageAlt, tags } in blogPostsWithTag" :key="slug">

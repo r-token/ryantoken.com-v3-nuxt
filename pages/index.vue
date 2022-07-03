@@ -8,9 +8,13 @@
 
 <template>
   <div>
-    <h1 class="text-2xl font-bold mb-5">Hi there!</h1>
+    <LargeHeader text="Hi, I'm Ryan" />
 
-    <h1 class="text-xl font-bold mb-5">Latest blog posts</h1>
+    <p class="mt-4 mb-8">
+      I'm a 💻 developer, 🎙️ podcaster, 📝 writer, 🏈🏀 sports fan, and 🤓 techie.
+    </p>
+
+    <h1 class="text-xl font-bold mb-4">Latest blog posts</h1>
 
     <ul class="grid gap-6 grid-cols-1 xl:grid-cols-2">
       <li v-for="{ _path: slug, title, description, date, image, imageAlt, tags } in recentBlogPosts" :key="slug">

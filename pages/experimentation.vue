@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1 class="text-xl font-bold mb-5">Experimentation page</h1>
+    <Header text="Experimentation"/>
   </div>
 </template>
