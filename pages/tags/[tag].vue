@@ -12,9 +12,9 @@
     <h1 class="text-xl font-bold mb-5">Blog posts tagged with {{route.params.tag}}</h1>
 
     <ul class="mb-10">
-      <li v-for="{ _path: slug, title, description, image, imageAlt, tags } in blogPostsWithTag" :key="slug">
+      <li v-for="{ _path: slug, title, description, date, image, imageAlt, tags } in blogPostsWithTag" :key="slug">
         <NuxtLink :to="slug">
-          <BlogPreview :title="title" :description="description" :image="image" :imageAlt="imageAlt" :tags="tags" />
+          <BlogPreview :title="title" :description="description" :date="date" :image="image" :imageAlt="imageAlt" :tags="tags" />
         </NuxtLink>
       </li>
     </ul>
