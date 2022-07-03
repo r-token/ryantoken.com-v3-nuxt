@@ -28,7 +28,7 @@
         <div class="px-8 pt-4 relative">
           <a class="block text-lg leading-tight font-medium text-black hover:underline">{{ title }}</a>
           <p class="mt-2 text-slate-500">{{ description }}</p>
-          <p class="mt-2 text-slate-500">{{ formattedDate }}</p>
+          <p class="mt-2 text-slate-500 pb-12">{{ formattedDate }}</p>
           <div class="absolute bottom-1">
             <div v-for="tag in tags" :key="tag" class="inline-block mr-4 uppercase tracking-wide text-sm text-indigo-500 font-semibold">
               <NuxtLink :to="'/tags/' + tag">
