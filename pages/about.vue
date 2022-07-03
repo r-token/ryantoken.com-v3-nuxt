@@ -2,7 +2,7 @@
   <div>
     <Header text="About"/>
 
-    <img src="/site-images/profile.jpg" alt="A photo of Ryan Token" class="w-1/4 rounded-xl mb-4"/>
+    <img src="/site-images/profile.jpg" alt="A photo of Ryan Token" class="w-1/3 max-w-xs rounded-xl mb-4"/>
 
     <p class="mb-4">
       Hi, I'm Ryan. You can find me writing <ExternalLink url="https://github.com/r-token" text="code"/>, running my <ExternalLink url="https://thegoldenhurricast.com" text="podcast" />, or watching my <ExternalLink url="https://tulsahurricane.com" text="team" />.
