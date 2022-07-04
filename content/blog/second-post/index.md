@@ -10,4 +10,4 @@ tags:
   - personal
 ---
 
-This is my second blog post using Nuxt 3 and Nuxt Content
+# This is my second blog post using Nuxt 3 and Nuxt Content

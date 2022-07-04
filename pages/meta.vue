@@ -8,7 +8,7 @@
 
     <hr class="mb-6" />
 
-    <p class="mb-4">This site was created with <ExternalLink url="https://vuejs.org" text="Vue.js"/> and <ExternalLink url="https://nuxtjs.org" text="Nuxt 3"/>.</p>
+    <p class="mb-4">This site was created with <ExternalLink url="https://vuejs.org" text="Vue.js"/> and <ExternalLink url="https://nuxtjs.org" text="Nuxt 3"/>, and is hosted on <ExternalLink url="https://netlify.com" text="Netlify"/>.</p>
 
     <p class="mb-4">The blog is generated with <ExternalLink url="https://content.nuxtjs.org" text="Nuxt Content"/> and <ExternalLink url="https://content.nuxtjs.org/guide/writing/mdc/" text="Markdown"/>.</p>
 

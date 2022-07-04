@@ -15,5 +15,11 @@ export default defineNuxtConfig({
         autoInstall: true
       })
     ]
+  },
+
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
   }
 })

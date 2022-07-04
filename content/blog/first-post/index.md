@@ -12,6 +12,20 @@ tags:
 
 # This is my first blog post using Nuxt 3 and Nuxt Content
 
+## H2 Header
+
+<br />
+
+*hi*
+
+**hello**
+
+<br />
+
+`inline code`
+
+<br />
+
 ```
   const hello = () => {
     return true

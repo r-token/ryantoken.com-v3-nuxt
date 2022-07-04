@@ -39,6 +39,20 @@
 
     <hr class="mb-8" />
 
+    <Header class="text-2xl" text="The Golden Hurricast" />
+
+    <p class="mb-4"><ExternalLink url="https://www.thegoldenhurricast.com" text="The Golden Hurricast"/> is the leading independent podcast and blog covering Golden Hurricane athletics at The University of Tulsa.</p>
+
+    <p>The website was built with <ExternalLink url="https://reactjs.org" text="React"/>, <ExternalLink url="https://graphql.org/" text="GraphQL"/>, and <ExternalLink url="https://www.gatsbyjs.org/" text="Gatsby"/>.</p>
+
+    <div class="max-w-5xl">
+      <ResizableImage src="/site-images/hurricast/hurricast-website.png" altText="The Golden Hurricast home page" url="https://thegoldenhurricast.com"/>
+    </div>
+
+    <p class="mb-8">I built and maintain the website, as well as co-host the podcast and contribute to blog posts. All of the content produced by The Golden Hurricast is completely free.</p>
+
+    <hr class="mb-8" />
+
     <Header class="text-2xl" text="Eagle Crest STL"/>
 
     <p class="mb-4"><ExternalLink url="https://eaglecreststl.org" text="Eagle Crest STL"/> is a fully serverless web app tailor-made for the Eagle Crest HOA in St. Louis, MO.</p>
@@ -55,9 +69,9 @@
 
     <hr class="mb-8" />
 
-    <Header class="text-2xl" text="Dashing Through the 'Ville'"/>
+    <Header class="text-2xl" text="Dashing Through the 'Ville"/>
 
-    <p class="mb-4"><ExternalLink url="https://dashingthroughtheville.com" text="Dashing Through the 'Ville'"/> is a city-wide scavenger hunt held throughout Bartlesville, Oklahoma.</p>
+    <p class="mb-4"><ExternalLink url="https://dashingthroughtheville.com" text="Dashing Through the 'Ville"/> is a city-wide scavenger hunt held throughout Bartlesville, Oklahoma.</p>
 
     <p class="mb-4">Proceeds from the event benefitted Youth and Family Services of Washington County, and it helped them raise a total of $15,000.</p>
 
@@ -90,20 +104,6 @@
     <p class="mb-8">Read my blog post about modernizing CatchUp <ExternalLink url="https://ryantoken.com/blog/catching-up" text="here"/>.</p>
 
     <a class="mb-8" href="https://itunes.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;"></a>
-
-    <hr class="mb-8" />
-
-    <Header class="text-2xl" text="The Golden Hurricast" />
-
-    <p class="mb-4"><ExternalLink url="https://www.thegoldenhurricast.com" text="The Golden Hurricast"/> is the leading independent podcast and blog covering Golden Hurricane athletics at The University of Tulsa.</p>
-
-    <p>The website was built with <ExternalLink url="https://reactjs.org" text="React"/>, <ExternalLink url="https://graphql.org/" text="GraphQL"/>, and <ExternalLink url="https://www.gatsbyjs.org/" text="Gatsby"/>.</p>
-
-    <div class="max-w-5xl">
-      <ResizableImage src="/site-images/hurricast/hurricast-website.png" altText="The Golden Hurricast home page" url="https://thegoldenhurricast.com"/>
-    </div>
-
-    <p class="mb-4">I built and maintain the website, as well as co-host the podcast and contribute to blog posts. All of the content produced by The Golden Hurricast is completely free.</p>
 
   </div>
 </template>
