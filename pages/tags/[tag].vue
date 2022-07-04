@@ -14,7 +14,7 @@
 
 <template>
   <div>
-    <Header :text="headerText"/>
+    <LargeHeader :text="headerText"/>
 
     <ul class="mb-10">
       <li v-for="{ _path: slug, title, description, date, image, imageAlt, tags } in blogPostsWithTag" :key="slug">

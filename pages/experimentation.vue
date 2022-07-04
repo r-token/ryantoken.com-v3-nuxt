@@ -1,5 +1,5 @@
 <template>
   <div>
-    <Header text="Experimentation"/>
+    <LargeHeader text="Experimentation"/>
   </div>
 </template>

@@ -47,7 +47,9 @@
               <icon-show-sidebar />
             </button>
             <div class="text-2xl font-bold flex items-center px-6 pt-16 pb-2">
-              <NuxtLink @click="toggleSidebar" to="/"><LargeHeader text="Ryan Token"/></NuxtLink>
+              <NuxtLink @click="toggleSidebar" to="/">
+                <h1 class="text-2xl font-bold mb-2 text-indigo-500">Ryan Token</h1>
+              </NuxtLink>
             </div>
 
             <div class="overflow-y-auto flex-1">
@@ -96,11 +98,13 @@
     <!-- DESKTOP SIDEBAR -->
     <div class="hidden lg:block flex flex-col h-full w-64 pt-1 bg-gray-50 border-r border-gray-200">
       <div class="text-2xl font-bold flex items-center px-6 py-2.5 pb-2">
-        <NuxtLink to="/"><LargeHeader text="Ryan Token" /></NuxtLink>
+        <NuxtLink to="/">
+          <h1 class="text-2xl font-bold mb-2 text-indigo-500">Ryan Token</h1>
+        </NuxtLink>
       </div>
 
       <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
-        <NuxtLink :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 hover:text-blue-500">
+        <NuxtLink :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 hover:text-indigo-500">
           <div class="mr-3">
             <div v-if="navItem.label === 'Blog'">
               <icon-blog />

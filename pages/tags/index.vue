@@ -18,7 +18,7 @@
 
 <template>
   <div>
-    <Header text="All Tags"/>
+    <LargeHeader text="All Tags"/>
 
     <ul>
       <li v-for="tag in tags" :key="tag.toString()">

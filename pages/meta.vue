@@ -1,5 +1,5 @@
 <template>
   <div>
-    <Header text="Meta"/>
+    <LargeHeader text="Meta"/>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header text="About"/>
+    <LargeHeader text="About"/>
 
     <img src="/site-images/profile.jpg" alt="A photo of Ryan Token" class="w-1/3 max-w-xs rounded-xl mb-4"/>
 
