@@ -11,3 +11,9 @@ tags:
 ---
 
 # This is my first blog post using Nuxt 3 and Nuxt Content
+
+```
+  const hello = () => {
+    return true
+  }
+```
