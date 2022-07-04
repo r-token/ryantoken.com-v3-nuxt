@@ -9,6 +9,10 @@
   <div>
     <LargeHeader text="Blog"/>
 
+    <p class="italic mb-6 text-gray-500">
+      All blog posts
+    </p>
+
     <ul class="grid gap-6 grid-cols-1 xl:grid-cols-2">
       <li v-for="{ _path: slug, title, description, date, image, imageAlt, tags } in allBlogPosts" :key="slug">
         <NuxtLink :to="slug">

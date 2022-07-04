@@ -24,7 +24,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="h-screen sticky top-0">
     <!-- MOBILE SIDEBAR -->
     <TransitionRoot :show="sidebarOpened">
       <Dialog as="div" @close="toggleSidebar" class="fixed inset-0 z-40 lg:hidden">
@@ -37,7 +37,7 @@
           leave-to="-translate-x-full"
           as="template"
         >
-          <div class="flex flex-col lg:hidden relative z-10 h-full w-72 w-64 pt-1 bg-gray-50 border-r border-gray-200">
+          <div class="flex flex-col overflow-y-auto lg:hidden relative z-10 h-full w-72 w-64 pt-1 bg-gray-50 border-r border-gray-200">
             <button 
               @click="toggleSidebar"
               class="absolute top-3 left-3 flex items-center justify-center w-10 h-10 rounded-full focus:outline-none"
@@ -52,7 +52,7 @@
               </NuxtLink>
             </div>
 
-            <div class="overflow-y-auto flex-1">
+            <div class="flex-1">
               <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
                 <NuxtLink @click="toggleSidebar" :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 hover:text-blue-500">
                   <div class="mr-3">
@@ -96,7 +96,7 @@
     </TransitionRoot>
 
     <!-- DESKTOP SIDEBAR -->
-    <div class="hidden lg:block flex flex-col h-full w-64 pt-1 bg-gray-50 border-r border-gray-200">
+    <div class="hidden lg:block flex flex-col overflow-y-auto h-full w-64 pt-1 bg-gray-50 border-r border-gray-200">
       <div class="text-2xl font-bold flex items-center px-6 py-2.5 pb-2">
         <NuxtLink to="/">
           <h1 class="text-2xl font-bold mb-2 text-indigo-500">Ryan Token</h1>

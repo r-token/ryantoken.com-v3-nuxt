@@ -2,6 +2,10 @@
   <div>
     <LargeHeader text="About"/>
 
+    <p class="italic mb-6 text-gray-500">
+      A bit about me.
+    </p>
+
     <img src="/site-images/profile.jpg" alt="A photo of Ryan Token" class="w-1/3 max-w-xs rounded-xl mb-4"/>
 
     <p class="mb-4">
@@ -13,9 +17,9 @@
     </p>
 
     <div class="flex items-stretch mb-4">
-      <ResizableImage src="/site-images/outrank-icon.png" altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
-      <ResizableImage src="/site-images/hurricast-icon.jpg" altText="The Golden Hurricast's logo" url="https://thegoldenhurricast.com"/>
-      <ResizableImage src="/site-images/catchup-icon.png" altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
+      <ResizableImage src="/site-images/outrank/outrank-icon.png" altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+      <ResizableImage src="/site-images/hurricast/hurricast-icon.jpg" altText="The Golden Hurricast's logo" url="https://thegoldenhurricast.com"/>
+      <ResizableImage src="/site-images/catchup/catchup-icon.png" altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
     </div>
 
     <p class="mb-4">
