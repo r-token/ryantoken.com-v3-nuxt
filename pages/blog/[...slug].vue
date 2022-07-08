@@ -20,11 +20,11 @@
 
   <div v-else class="mx-3 xl:mx-60 lg:mx35 md:mx-20">
     <ContentDoc
+      v-slot="{ doc }"
       :path="$route.params.slug ? `/blog/${$route.params.slug[0]}` : '/blog'"
     >
-      <template #not-found>
-        <h2>Blog slug ({{ $route.params.slug }}) not found</h2>
-      </template>
+      <h2 class="my-4 text-4xl font-semibold">{{ doc.title }}</h2>
+      <ContentRenderer class="prose prose-sm sm:prose lg:prose-lg mx-auto max-w-100%" :value="doc" />
     </ContentDoc>
   </div>
 </template>
