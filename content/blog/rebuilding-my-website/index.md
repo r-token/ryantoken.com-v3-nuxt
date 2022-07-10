@@ -9,6 +9,8 @@ tags:
   - publish
 ---
 
+# Rebuilding my Website
+
 *Why I decided to rebuild ryantoken.com from the ground up, and how I did it with Swift (and without JavaScript).*
 
 <!--more-->

@@ -23,7 +23,6 @@
       v-slot="{ doc }"
       :path="$route.params.slug ? `/blog/${$route.params.slug[0]}` : '/blog'"
     >
-      <h2 class="my-4 text-4xl font-semibold">{{ doc.title }}</h2>
       <ContentRenderer class="prose prose-sm sm:prose lg:prose-lg mx-auto max-w-100%" :value="doc" />
     </ContentDoc>
   </div>

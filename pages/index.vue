@@ -10,7 +10,7 @@
   <div>
     <LargeHeader text="Hi, I'm Ryan" />
 
-    <p class="mt-4 mb-8 italic text-gray-500">
+    <p class="mt-4 mb-8 text-gray-500">
       I'm a 💻 developer, 🎙️ podcaster, 📝 writer, 🏈🏀 sports fan, and 🤓 techie.
     </p>
 

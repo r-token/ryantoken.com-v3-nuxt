@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['uncut-sans', ...defaultTheme.fontFamily.sans],
-        serif: ['sprat', ...defaultTheme.fontFamily.serif]
+        sans: ['-apple-system', 'BlinkMacSystemFont', ...defaultTheme.fontFamily.sans],
+        serif: [...defaultTheme.fontFamily.serif]
       },
     }
   },
