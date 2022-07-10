@@ -16,6 +16,10 @@
     font-size: 18px;
   }
 
+  a {
+    text-decoration: none !important;
+  }
+
   em {
     color: #6B7280;
   }

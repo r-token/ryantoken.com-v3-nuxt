@@ -2,7 +2,7 @@
   const recentBlogPosts = await queryContent('/blog')
     .sort({ date: -1 }) // show latest articles first
     .where({ _partial: false }) // exclude the Partial files
-    .limit(5)
+    .limit(4)
     .find()
 </script>
 

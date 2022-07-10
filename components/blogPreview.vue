@@ -18,7 +18,7 @@
 </script>
 
 <template>
-  <div class="mx-auto max-w-xs max-h-sm rounded-3xl shadow-md overflow-hidden mb-6 md:max-w-2xl">
+  <div class="mx-auto max-w-xs rounded-3xl shadow-md overflow-hidden mb-6 md:max-w-2xl">
     <NuxtLink :to="slug">
       <div class="md:flex">
         <div class="md:shrink-0 max-w-xs max-h-xs">

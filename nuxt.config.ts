@@ -8,6 +8,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss'
   ],
 
+  content: {
+    highlight: {
+      theme: 'github-light'
+    }
+  },
+
   vite: {
     plugins: [
       Icons({

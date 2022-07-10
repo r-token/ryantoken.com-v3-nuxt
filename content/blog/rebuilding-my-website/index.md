@@ -9,13 +9,15 @@ tags:
   - publish
 ---
 
-# Rebuilding my Website
+# Rebuilding My Website
 
-*Why I decided to rebuild ryantoken.com from the ground up, and how I did it with Swift (and without JavaScript).*
+*Why I decided to rebuild ryantoken.com with Swift.*
 
 <!--more-->
 
 March 22, 2020
+
+---
 
 ### Website V1: Bootstrap All the Things
 

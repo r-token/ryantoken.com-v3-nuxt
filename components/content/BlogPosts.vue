@@ -10,7 +10,7 @@
     <LargeHeader text="Blog"/>
 
     <p class="italic mb-6 text-gray-500">
-      All blog posts
+      Everything I've ever written online.
     </p>
 
     <ul class="grid gap-6 grid-cols-1 xl:grid-cols-2">
