@@ -22,7 +22,7 @@
 
     <ul>
       <li v-for="tag in tags" :key="tag.toString()">
-        <NuxtLink :to="'/tags/' + tag" class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+        <NuxtLink :to="'/tags/' + tag" class="uppercase tracking-wide text-sm text-indigo-500 dark:text-sky-300 font-semibold">
           {{ tag }}
         </NuxtLink>
       </li>

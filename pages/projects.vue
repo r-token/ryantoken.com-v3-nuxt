@@ -2,7 +2,7 @@
   <div>
     <LargeHeader text="Projects" />
 
-    <p class="italic mb-4 text-gray-500">
+    <p class="italic mb-4 text-gray-500 dark:text-gray-400">
       What I'm currently working on in my spare time. You can support my work on <ExternalLink url="https://patreon.com/ryantoken" text="Patreon"/> or <ExternalLink url="https://www.buymeacoffee.com/ryantoken" text="Buy Me a Coffee"/>.
     </p>
 

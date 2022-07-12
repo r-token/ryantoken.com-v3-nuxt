@@ -3,7 +3,7 @@
   import IconShowSidebar from '~icons/zondicons/show-sidebar'
   import IconBlog from '~icons/jam/write-f'
   import IconProfile from '~icons/iconoir/profile-circled'
-  import IconProjects from '~icons/material-symbols/rocket-launch'
+  import IconProjects from '~icons/material-symbols/rocket-launch-outline-rounded'
   import IconMeta from '~icons/octicon/stack-24'
   import IconExperimentation from '~icons/icon-park-solid/experiment-one'
 
@@ -37,10 +37,10 @@
           leave-to="-translate-x-full"
           as="template"
         >
-          <div class="flex flex-col overflow-y-auto lg:hidden relative z-10 h-full w-72 w-64 pt-1 bg-gray-50 border-r border-gray-200">
+          <div class="flex flex-col overflow-y-auto lg:hidden relative z-10 h-full w-72 w-64 pt-1 bg-gray-50 dark:bg-slate-700 border-r border-gray-200 dark:border-slate-700">
             <button 
               @click="toggleSidebar"
-              class="absolute top-3 left-3 flex items-center justify-center w-10 h-10 rounded-full focus:outline-none"
+              class="absolute top-3 left-3 flex items-center justify-center w-10 h-10 text-gray-600 dark:text-gray-300 rounded-full focus:outline-none"
               type="button"
               value="Close Sidebar"
             >
@@ -48,28 +48,28 @@
             </button>
             <div class="text-2xl font-bold flex items-center px-6 pt-16 pb-2">
               <NuxtLink @click="toggleSidebar" to="/">
-                <h1 class="text-2xl font-bold mb-2 text-indigo-500">Ryan Token</h1>
+                <LargeHeader class="mb-3" text="Ryan Token" />
               </NuxtLink>
             </div>
 
             <div class="flex-1">
               <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
-                <NuxtLink @click="toggleSidebar" :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 hover:text-blue-500">
+                <NuxtLink @click="toggleSidebar" :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 dark:text-gray-300 hover:text-indigo-500 hover:dark:text-slate-200">
                   <div class="mr-3">
                     <div v-if="navItem.label === 'Blog'">
-                      <icon-blog />
+                      <icon-blog class="text-indigo-500 dark:text-sky-400"/>
                     </div>
                     <div v-else-if="navItem.label === 'About'">
-                      <icon-profile />
+                      <icon-profile class="text-pink-500 dark:text-pink-400" />
                     </div>
                     <div v-else-if="navItem.label === 'Projects'">
-                      <icon-projects />
+                      <icon-projects class="text-red-500 dark:text-red-400" />
                     </div>
                     <div v-else-if="navItem.label === 'Meta'">
-                      <icon-meta />
+                      <icon-meta class="text-yellow-500 dark:text-yellow-400"/>
                     </div>
                     <div v-else-if="navItem.label === 'Experimentation'">
-                      <icon-experimentation />
+                      <icon-experimentation class="text-green-500 dark:text-green-400" />
                     </div>
                   </div>
                   <div>
@@ -96,30 +96,30 @@
     </TransitionRoot>
 
     <!-- DESKTOP SIDEBAR -->
-    <div class="hidden lg:block flex flex-col overflow-y-auto h-full w-64 pt-1 bg-gray-50 border-r border-gray-200">
+    <div class="hidden lg:block flex flex-col overflow-y-auto h-full w-64 pt-1 bg-gray-50 dark:bg-slate-700 border-r border-gray-200 dark:border-slate-700">
       <div class="text-2xl font-bold flex items-center px-6 py-2.5 pb-2">
         <NuxtLink to="/">
-          <h1 class="text-2xl font-bold mb-2 text-indigo-500">Ryan Token</h1>
+          <LargeHeader class="mb-1 mt-2" text="Ryan Token" />
         </NuxtLink>
       </div>
 
       <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
-        <NuxtLink :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 hover:text-indigo-500">
+        <NuxtLink :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 dark:text-gray-300 hover:text-indigo-500 hover:dark:text-slate-200">
           <div class="mr-3">
             <div v-if="navItem.label === 'Blog'">
-              <icon-blog />
+              <icon-blog class="text-indigo-500 dark:text-sky-400"/>
             </div>
             <div v-else-if="navItem.label === 'About'">
-              <icon-profile />
+              <icon-profile class="text-pink-500 dark:text-pink-400" />
             </div>
             <div v-else-if="navItem.label === 'Projects'">
-              <icon-projects />
+              <icon-projects class="text-red-500 dark:text-red-400" />
             </div>
             <div v-else-if="navItem.label === 'Meta'">
-              <icon-meta />
+              <icon-meta class="text-yellow-500 dark:text-yellow-400"/>
             </div>
             <div v-else-if="navItem.label === 'Experimentation'">
-              <icon-experimentation />
+              <icon-experimentation class="text-green-500 dark:text-green-400" />
             </div>
           </div>
           <div>

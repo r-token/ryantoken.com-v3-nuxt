@@ -10,9 +10,7 @@
   <div>
     <LargeHeader text="Hi, I'm Ryan" />
 
-    <p class="mt-4 mb-8 text-gray-500">
-      I'm a 💻 developer, 🎙️ podcaster, 📝 writer, 🏈🏀 sports fan, and 🤓 techie.
-    </p>
+    <Subheader class="not-italic" text="I'm a 💻 developer, 🎙️ podcaster, 📝 writer, 🏈🏀 sports fan, and 🤓 techie."/>
 
     <h1 class="text-xl font-bold mb-6">Latest blog posts</h1>
 

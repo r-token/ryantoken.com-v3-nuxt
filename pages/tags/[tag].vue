@@ -24,6 +24,6 @@
       </li>
     </ul>
 
-    <NuxtLink to="/tags" class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">See All Tags</NuxtLink>
+    <NuxtLink to="/tags" class="uppercase tracking-wide text-sm text-indigo-500 dark:text-sky-300 font-semibold">See All Tags</NuxtLink>
   </div>
 </template>

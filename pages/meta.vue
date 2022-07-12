@@ -2,9 +2,7 @@
   <div>
     <LargeHeader text="Meta"/>
 
-    <p class="italic mb-6 text-gray-500">
-      How this site was built.
-    </p>
+    <Subheader text="How this site was built."/>
 
     <hr class="mb-6" />
 

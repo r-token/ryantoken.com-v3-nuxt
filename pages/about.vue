@@ -2,9 +2,7 @@
   <div>
     <LargeHeader text="About"/>
 
-    <p class="italic mb-6 text-gray-500">
-      A bit about me.
-    </p>
+    <Subheader text="A bit about me."/>
 
     <img src="/site-images/profile.jpg" alt="A photo of Ryan Token" class="w-1/3 max-w-xs rounded-xl mb-4"/>
 

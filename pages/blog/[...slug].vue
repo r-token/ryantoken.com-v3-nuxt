@@ -23,7 +23,7 @@
       v-slot="{ doc }"
       :path="$route.params.slug ? `/blog/${$route.params.slug[0]}` : '/blog'"
     >
-      <ContentRenderer class="prose prose-sm sm:prose lg:prose-lg mx-auto max-w-100%" :value="doc" />
+      <ContentRenderer class="prose prose-sm sm:prose lg:prose-lg dark:prose-invert dark:prose-sm-invert dark:sm:prose-invert dark:lg:prose-lg-invert w-80 lg:w-full xl:w-full 2xl:w-full" :value="doc" />
     </ContentDoc>
   </div>
 </template>
