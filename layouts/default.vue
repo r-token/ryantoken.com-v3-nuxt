@@ -6,7 +6,7 @@
 <template>
   <div class="flex min-h-screen">
     <Sidebar :sidebarOpened="sidebarOpened" @toggleSidebar="toggleSidebar($event)" />
-    <div class="flex-1">
+    <div class="flex-1 min-w-0">
       <Topbar @toggleSidebar="toggleSidebar($event)" />
       <main class="p-6 dark:text-gray-300">
         <slot />
