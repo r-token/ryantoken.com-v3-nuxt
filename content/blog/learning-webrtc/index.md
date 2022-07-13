@@ -220,32 +220,32 @@ Note that we will not need to connect to any STUN or TURN servers in this exampl
 
 1. Create the local peer connection.
 
-```
+```js
 const localConnection = new RTCPeerConnection()
 ```
 
 2. Create a data channel from that connection.
 
-```
+```js
 const dataChannel = localConnection.createDataChannel("channel")
 ```
 
 3. Set up listeners on this channel for when a message is received (onmessage) and when a connection is opened (onopen).
 
-```
+```js
 dataChannel.onmessage = e => console.log("Just got a message " + e.data)
 dataChannel.onopen = e => console.log("Connection opened!")
 ```
 
 4. Set up a listener on the local connection for new ICE candidates. Print the SDP string every time we get a new ICE candidate. This will provide examples of what SDP strings look like.
 
-```
+```js
 localConnection.onicecandidate = e => console.log("New ICE candidate! Reprinting SDP " + JSON.stringify(localConnection.localDescription))
 ```
 
 5. Create the offer locally, and set that offer as our local SDP description.
 
-```
+```js
 localConnection.createOffer()
   .then(offer => localConnection.setLocalDescription(offer))
   .then(a => console.log("Set local SDP description successfully"))
@@ -257,25 +257,25 @@ Now open a new browser window, and we'll work on connecting the two browsers.
 
 1. After running the previous commands in browser one, you should have an SDP offer string printed out in your browser's dev tools. Copy and paste that from browser one, and set it to a new variable in browser two. It should look something like this:
 
-```
+```js
 const offer = {"type":"offer","sdp":"v=0\r\no=- 6161885883039613335 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 0\r\na=extmap-allow-mixed\r\na=msid-semantic: WMS\r\nm=application 9 UDP/DTLS/SCTP webrtc-datachannel\r\nc=IN IP4 0.0.0.0\r\na=candidate:613963537 1 udp 2122262783 8feb3e9a-4ba2-48b6-a5b9-b7e6164dad0d.local 50380 typ host generation 0 network-id 2 network-cost 50\r\na=ice-ufrag:m9IL\r\na=ice-pwd:HSi4w0HG5HCDGlhkTaJVACHM\r\na=ice-options:trickle\r\na=fingerprint:sha-256 B5:BF:A6:FA:45:FE:83:B7:AF:D2:03:5F:FC:EF:06:ED:2E:C2:51:A3:53:7E:7E:7A:B0:6D:AE:08:9C:3A:A4:D7\r\na=setup:actpass\r\na=mid:0\r\na=sctp-port:5000\r\na=max-message-size:262144\r\n"}
 ```
 
 2. Create the remote peer connection.
 
-```
+```js
 const remoteConnection = new RTCPeerConnection()
 ```
 
 3. Print the SDP string every time we get a new ICE candidate on the remote side this time.
 
-```
+```js
 remoteConnection.onicecandidate = e => console.log("New ICE candidate! Reprinting SDP " + JSON.stringify(remoteConnection.localDescription))
 ```
 
 4. Set up a listener on the remote connection that will receive the data channel from the other connection.
 
-```
+```js
 remoteConnection.ondatachannel = e => {
   remoteConnection.dataChannel = e.channel // e.channel is the data channel we received from the other party
   remoteConnection.dataChannel.onmessage = e => console.log("New message from client! " + e.data)
@@ -285,7 +285,7 @@ remoteConnection.ondatachannel = e => {
 
 5. Set our remote and local SDP descriptions based on the offer we received (remote SDP description) and the answer we create (local SDP description).
 
-```
+```js
 // set remote description for the offer we received
 remoteConnection.setRemoteDescription(offer)
   .then(a => console.log("Offer set!"))
@@ -300,25 +300,25 @@ remoteConnection.createAnswer()
 
 1. Set the answer SDP we just generated in the previous step to an answer variable.
 
-```
+```js
 const answer = {"type":"answer","sdp":"v=0\r\no=- 1817317559757912498 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 0\r\na=extmap-allow-mixed\r\na=msid-semantic: WMS\r\nm=application 9 UDP/DTLS/SCTP webrtc-datachannel\r\nc=IN IP4 0.0.0.0\r\na=candidate:613963537 1 udp 2122262783 264b84bf-cd92-41f3-9b5c-6d08060977f8.local 58006 typ host generation 0 network-id 2 network-cost 50\r\na=ice-ufrag:O629\r\na=ice-pwd:8TOlrnjf31jsOOIHZZGnT1Xh\r\na=ice-options:trickle\r\na=fingerprint:sha-256 DC:CE:94:53:BC:E1:BF:1F:67:44:08:5F:8E:A5:B7:AD:01:D3:84:C8:FC:D5:BA:D7:76:28:E3:3F:FC:15:3E:9B\r\na=setup:active\r\na=mid:0\r\na=sctp-port:5000\r\na=max-message-size:262144\r\n"}
 ```
 
 2. We're coming full circle now. In the first section (Browser One), we set the local connection's local description. In the second section (Browser Two), we set the remote connection's local & remote descriptions. And now, we close the loop by setting the local connection's remote description to the answer we just set in the previous step. This opens the connection between the two peers.
 
-```
+```js
 localConnection.setRemoteDescription(answer)
 ```
 
 3. The connection is now open, and we can send data back and forth between the two browsers with the send() function.
 
 *Browser One (the local connection)*
-```
+```js
 dataChannel.send("Hello Peer B, what's up?")
 ```
 
 *Browser Two (the remote connection)*
-```
+```js
 remoteConnection.dataChannel.send("Not much Peer A, what about you?")
 ```
 
