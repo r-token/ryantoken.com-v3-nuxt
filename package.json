@@ -22,6 +22,7 @@
     "unplugin-icons": "^0.14.7"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.6.5"
+    "@headlessui/vue": "^1.6.5",
+    "@nuxtjs/algolia": "^1.0.1"
   }
 }
