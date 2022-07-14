@@ -83,7 +83,7 @@
 
     <p class="mb-4">I was the sole developer for this project. As a volunteer, I ended up building the entire application in a span of three weeks.</p>
 
-    <p class="mb-8">We had about three hundred users throughout the city and had incidents throughout the event.</p>
+    <p class="mb-8">We had about three hundred users throughout the city and had no incidents throughout the event.</p>
 
     <hr class="mb-8"/>
 
