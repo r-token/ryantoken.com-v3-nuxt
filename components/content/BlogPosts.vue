@@ -13,9 +13,7 @@
 
     <ul class="grid gap-6 grid-cols-1 xl:grid-cols-2">
       <li v-for="{ _path: slug, title, description, date, image, imageAlt, tags } in allBlogPosts" :key="slug">
-        <NuxtLink :to="slug">
-          <BlogPreview :title="title" :description="description" :date="date" :image="image" :imageAlt="imageAlt" :tags="tags" />
-        </NuxtLink>
+        <BlogPreview :slug="slug" :title="title" :description="description" :date="date" :image="image" :imageAlt="imageAlt" :tags="tags" />
       </li>
     </ul>
   </div>

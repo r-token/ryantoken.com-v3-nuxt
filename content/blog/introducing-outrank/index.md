@@ -7,6 +7,18 @@ tags:
   - iOS
   - swift
   - swiftui
+  
+head:
+  title: Ryan Token - Introducing Outrank
+  meta:
+    - name: 'keywords'
+      content: 'iOS, swift, swiftui, outrank, app'
+    - name: 'robots'
+      content: 'index, follow'
+    - name: 'author'
+      content: 'Ryan Token'
+    - name: 'copyright'
+      content: '@ 2022 Ryan Token'
 ---
 
 # Introducing Outrank

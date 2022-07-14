@@ -7,6 +7,18 @@ tags:
   - web
   - cloud
   - serverless
+  
+head:
+  title: Ryan Token - Serverless Compute with Dynamic Ephemeral Storage
+  meta:
+    - name: 'keywords'
+      content: 'web, cloud, serverless, innovation'
+    - name: 'robots'
+      content: 'index, follow'
+    - name: 'author'
+      content: 'Ryan Token'
+    - name: 'copyright'
+      content: '@ 2022 Ryan Token'
 ---
 
 # Storyboard Dev Blog: Serverless Compute with Dynamic Ephemeral Storage

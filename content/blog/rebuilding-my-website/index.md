@@ -7,6 +7,18 @@ tags:
   - web
   - swift
   - publish
+  
+head:
+  title: Ryan Token - Rebuilding My Website
+  meta:
+    - name: 'keywords'
+      content: 'swift, publish, website, rebuild'
+    - name: 'robots'
+      content: 'index, follow'
+    - name: 'author'
+      content: 'Ryan Token'
+    - name: 'copyright'
+      content: '@ 2022 Ryan Token'
 ---
 
 # Rebuilding My Website

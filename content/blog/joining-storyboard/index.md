@@ -7,6 +7,18 @@ tags:
   - career
   - aws
   - serverless
+  
+head:
+  title: Ryan Token - I'm Joining Storyboard
+  meta:
+    - name: 'keywords'
+      content: 'career, storyboard'
+    - name: 'robots'
+      content: 'index, follow'
+    - name: 'author'
+      content: 'Ryan Token'
+    - name: 'copyright'
+      content: '@ 2022 Ryan Token'
 ---
 
 # I'm Joining Storyboard!

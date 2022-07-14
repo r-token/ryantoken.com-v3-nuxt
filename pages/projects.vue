@@ -1,3 +1,9 @@
+<script setup>
+  useHead({
+    title: 'Ryan Token - Projects'
+  })
+</script>
+
 <template>
   <div>
     <LargeHeader text="Projects" />

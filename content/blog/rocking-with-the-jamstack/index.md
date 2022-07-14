@@ -7,6 +7,18 @@ tags:
   - web
   - jamstack
   - serverless
+  
+head:
+  title: Ryan Token - Rocking with the Jamstack
+  meta:
+    - name: 'keywords'
+      content: 'jamstack, tutorial, serverless'
+    - name: 'robots'
+      content: 'index, follow'
+    - name: 'author'
+      content: 'Ryan Token'
+    - name: 'copyright'
+      content: '@ 2022 Ryan Token'
 ---
 
 # Rocking with the Jamstack

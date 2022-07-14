@@ -8,6 +8,18 @@ tags:
   - swift
   - swiftui
   - core data
+  
+head:
+  title: Ryan Token - Catching Up
+  meta:
+    - name: 'keywords'
+      content: 'iOS, swift, swiftui, catchup, app'
+    - name: 'robots'
+      content: 'index, follow'
+    - name: 'author'
+      content: 'Ryan Token'
+    - name: 'copyright'
+      content: '@ 2022 Ryan Token'
 ---
 
 # Catching Up

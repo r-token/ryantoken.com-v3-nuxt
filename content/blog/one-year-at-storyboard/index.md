@@ -6,6 +6,18 @@ imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda
 tags:
   - career
   - reflections
+  
+head:
+  title: Ryan Token - One Year at Storyboard
+  meta:
+    - name: 'keywords'
+      content: 'career, storyboard'
+    - name: 'robots'
+      content: 'index, follow'
+    - name: 'author'
+      content: 'Ryan Token'
+    - name: 'copyright'
+      content: '@ 2022 Ryan Token'
 ---
 
 # One Year at Storyboard

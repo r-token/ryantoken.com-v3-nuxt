@@ -6,6 +6,18 @@ imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda
 tags:
   - web
   - webrtc
+
+head:
+  title: Ryan Token - Learning  WebRTC
+  meta:
+    - name: 'keywords'
+      content: 'webrtc, tutorial'
+    - name: 'robots'
+      content: 'index, follow'
+    - name: 'author'
+      content: 'Ryan Token'
+    - name: 'copyright'
+      content: '@ 2022 Ryan Token'
 ---
 
 # Learning WebRTC

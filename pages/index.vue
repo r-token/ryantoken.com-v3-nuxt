@@ -1,4 +1,8 @@
 <script setup lang="ts">
+  useHead({
+    title: 'Ryan Token'
+  })
+
   const recentBlogPosts = await queryContent('/blog')
     .sort({ date: -1 }) // show latest articles first
     .where({ _partial: false }) // exclude the Partial files
@@ -19,6 +23,8 @@
         <BlogPreview :slug="slug" :title="title" :description="description" :date="date" :image="image" :imageAlt="imageAlt" :tags="tags" />
       </li>
     </ul>
+    
+    <NuxtLink to="/blog" class="uppercase tracking-wide text-sm text-indigo-500 dark:text-sky-300 font-semibold">See All Blog Posts</NuxtLink>
   </div>
 </template>
 

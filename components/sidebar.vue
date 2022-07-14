@@ -48,7 +48,7 @@
             </button>
             <div class="text-2xl font-bold flex items-center px-6 pt-16 pb-2">
               <NuxtLink @click="toggleSidebar" to="/">
-                <LargeHeader class="mb-3" text="Ryan Token" />
+                <LargeHeader class="mb-2" text="Ryan Token" />
               </NuxtLink>
             </div>
 
@@ -99,7 +99,7 @@
     <div class="hidden lg:block flex flex-col overflow-y-auto h-full w-64 pt-1 bg-gray-50 dark:bg-slate-700 border-r border-gray-200 dark:border-slate-700">
       <div class="text-2xl font-bold flex items-center px-6 py-2.5 pb-2">
         <NuxtLink to="/">
-          <LargeHeader class="mb-1 mt-2" text="Ryan Token" />
+          <LargeHeader class="mb-2 mt-2" text="Ryan Token" />
         </NuxtLink>
       </div>
 

@@ -1,4 +1,8 @@
 <script setup lang="ts">
+  useHead({
+    title: 'Ryan Token - Tags'
+  })
+
   const allPosts = await queryContent('/blog')
     .sort({ date: -1 }) // show latest articles first
     .find()
