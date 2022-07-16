@@ -30,6 +30,6 @@ exports.handler = async function(event, context) {
 	
 	return {
 		statusCode: 200,
-		body: { message: randomSentence }
+		body: JSON.stringify({ message: randomSentence })
 	}
 }

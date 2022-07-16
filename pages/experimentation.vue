@@ -4,17 +4,18 @@
   })
   
   const config = useRuntimeConfig()
+  console.log('api base:', config.public.apiBase)
   
-  const { data: randomSentence } = await useFetch(`${config.public.apiBase}/sentence-generator`)
+  const sentence = ref("")
   
-  const sentence = ref(JSON.parse(randomSentence.value).message)
-  
-  const generateRandomSentence = async () => {
-    const { data: newSentence } = await useFetch(`${config.public.apiBase}/sentence-generator`)
+  const generateRandomSentence = () => {
+    const { data: newSentence } = useFetch(`${config.public.apiBase}/sentence-generator`)
+    
+    console.log('newSentence:', newSentence.value)
     
     const jsonSentence = JSON.parse(newSentence.value)
-    console.log('new sentence:', jsonSentence.message)
     if (jsonSentence.message) {
+      console.log('new sentence:', jsonSentence.message)
       sentence.value = jsonSentence.message
     } else {
       sentence.value = ""
