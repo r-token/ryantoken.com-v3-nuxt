@@ -29,7 +29,7 @@
 <template>
   <div>
     <LargeHeader class="mb-0" text="Blog posts tagged with:"/>
-    <h1 class="text-2xl font-bold mb-6 text-indigo-500 dark:text-sky-300">{{tag}}</h1>
+    <h1 class="text-2xl font-bold mb-6 text-fuchsia-500 dark:text-sky-300">{{tag}}</h1>
 
     <ul class="mb-10">
       <li v-for="{ _path: slug, title, description, date, image, imageAlt, tags } in blogPostsWithTag" :key="slug">

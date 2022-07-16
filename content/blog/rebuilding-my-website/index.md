@@ -1,12 +1,12 @@
 ---
 title: Rebuilding My Website
 date: 2020-03-22
-image: /blog-images/dynamic-ephemeral-storage/eph.png
+image: /blog-images/rebuilding-my-website/cover.png
 imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda
 tags:
   - web
   - swift
-  - publish
+  - rewrite
   
 head:
   title: Ryan Token - Rebuilding My Website

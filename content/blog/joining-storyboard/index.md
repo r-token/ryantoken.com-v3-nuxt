@@ -1,7 +1,7 @@
 ---
 title: I'm Joining Storyboard!
 date: 2021-04-25
-image: /blog-images/dynamic-ephemeral-storage/eph.png
+image: /blog-images/joining-storyboard/cover.png
 imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda
 tags:
   - career

@@ -1,13 +1,13 @@
 ---
 title: Catching Up
 date: 2020-05-08
-image: /blog-images/dynamic-ephemeral-storage/eph.png
+image: /site-images/catchup/catchup-icon.png
 imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda
 tags:
   - iOS
   - swift
   - swiftui
-  - core data
+  - rewrite
   
 head:
   title: Ryan Token - Catching Up
@@ -24,7 +24,7 @@ head:
 
 # Catching Up
 
-*Modernizing CatchUp, my first iOS app, with SwiftUI, Core Data, and cleaner code.*
+*Modernizing CatchUp, my first iOS app, with SwiftUI and cleaner code.*
 
 <!--more-->
 

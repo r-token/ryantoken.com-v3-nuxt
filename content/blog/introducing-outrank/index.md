@@ -1,7 +1,7 @@
 ---
 title: Introducing Outrank
 date: 2021-10-26
-image: /blog-images/dynamic-ephemeral-storage/eph.png
+image: /site-images/outrank/outrank-icon.png
 imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda
 tags:
   - iOS

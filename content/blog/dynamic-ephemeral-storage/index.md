@@ -1,7 +1,7 @@
 ---
 title: Dynamic Ephemeral Storage
 date: 2022-06-10
-image: /blog-images/dynamic-ephemeral-storage/eph.png
+image: /blog-images/dynamic-ephemeral-storage/cover.png
 imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda
 tags:
   - web

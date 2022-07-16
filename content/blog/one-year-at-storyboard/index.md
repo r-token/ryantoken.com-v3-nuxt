@@ -1,7 +1,7 @@
 ---
 title: One Year at Storyboard
 date: 2022-04-29
-image: /blog-images/dynamic-ephemeral-storage/eph.png
+image: /blog-images/one-year-at-storyboard/cover.png
 imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda
 tags:
   - career

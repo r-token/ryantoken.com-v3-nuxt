@@ -1,7 +1,7 @@
 ---
 title: Learning WebRTC
 date: 2021-03-07
-image: /blog-images/dynamic-ephemeral-storage/eph.png
+image: /blog-images/learning-webrtc/cover.png
 imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda
 tags:
   - web

@@ -5,14 +5,8 @@ import Icons from 'unplugin-icons/vite'
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/algolia'
+    '@nuxtjs/tailwindcss'
   ],
-  
-  algolia: {
-    apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
-    applicationId: process.env.ALGOLIA_APP_ID
-  },
 
   content: {
     highlight: {

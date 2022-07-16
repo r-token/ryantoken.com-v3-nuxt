@@ -1,7 +1,7 @@
 ---
 title: Rocking with the Jamstack
 date: 2021-02-21
-image: /blog-images/dynamic-ephemeral-storage/eph.png
+image: /blog-images/rocking-with-the-jamstack/cover.png
 imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda
 tags:
   - web
