@@ -20,6 +20,10 @@ export default defineNuxtConfig({
       theme: 'one-dark-pro'
     }
   },
+  
+  image: {
+    dir: 'public'
+  },
 
   vite: {
     plugins: [
