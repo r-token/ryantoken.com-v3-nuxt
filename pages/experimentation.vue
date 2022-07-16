@@ -4,18 +4,23 @@
   })
   
   const config = useRuntimeConfig()
-  let { data: sentence } = await useFetch(`${config.public.apiBase}/sentence-generator`)
-  const refresh = async () => {
-    sentence = await useFetch(`${config.public.apiBase}/sentence-generator`)
-  }
   
-  const randomSentence = () => {
-    if (sentence.message) {
-      return sentence.message
+  const { data: randomSentence } = await useFetch(`${config.public.apiBase}/sentence-generator`)
+  
+  const sentence = ref(JSON.parse(randomSentence.value).message)
+  
+  const generateRandomSentence = async () => {
+    const { data: newSentence } = await useFetch(`${config.public.apiBase}/sentence-generator`)
+    
+    const jsonSentence = JSON.parse(newSentence.value)
+    console.log('new sentence:', jsonSentence.message)
+    if (jsonSentence.message) {
+      sentence.value = jsonSentence.message
     } else {
-      return ""
+      sentence.value = ""
     }
   }
+  
 </script>
 
 <template>
@@ -32,10 +37,10 @@
       </p>
       
       <p class="mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-fuchsia-500">
-        {{randomSentence()}}
+        {{sentence}}
       </p>
       
-      <button class="rounded-full p-3 bg-indigo-500 dark:bg-sky-500 dark:from-fuchsia-500 dark:to-red-500 text-white" @click="refresh">Generate Random Sentence</button>
+      <button class="rounded-full p-3 bg-indigo-500 dark:bg-sky-500 dark:from-fuchsia-500 dark:to-red-500 text-white" @click="generateRandomSentence">Generate Random Sentence</button>
     </div>
   </div>
 </template>
