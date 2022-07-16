@@ -8,6 +8,12 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@nuxtjs/tailwindcss'
   ],
+  
+  runtimeConfig: {
+    public: {
+      apiBase: ''
+    }
+  },
 
   content: {
     highlight: {
