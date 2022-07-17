@@ -22,7 +22,7 @@
     <NuxtLink :to="slug">
       <div class="md:flex">
         <div class="md:shrink-0 max-w-xs max-h-xs">
-          <nuxt-img class="w-full md:h-full md:w-48" :src="image" :alt="imageAlt" />
+          <img class="w-full md:h-full md:w-48" :src="image" :alt="imageAlt" />
         </div>
 
         <div class="px-8 pt-4 relative">

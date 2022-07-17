@@ -6,20 +6,25 @@
   const config = useRuntimeConfig()
   console.log('api base:', config.public.apiBase)
   
-  const sentence = ref("")
+  const { data: randomSentence, refresh } = await useFetch(`${config.public.apiBase}/sentence-generator`)
+  
+  const sentenceData = ref(randomSentence)
+  
+  const sentence = () => {
+    console.log('randomSentence:', sentenceData)
+    
+    if (sentenceData) {
+      if (sentenceData.value) {
+        const sentenceJson = JSON.parse(sentenceData.value)
+        return sentenceJson.message
+      }
+    } else {
+      return ""
+    }
+  }
   
   const generateRandomSentence = () => {
-    const { data: newSentence } = useFetch(`${config.public.apiBase}/sentence-generator`)
-    
-    console.log('newSentence:', newSentence.value)
-    
-    const jsonSentence = JSON.parse(newSentence.value)
-    if (jsonSentence.message) {
-      console.log('new sentence:', jsonSentence.message)
-      sentence.value = jsonSentence.message
-    } else {
-      sentence.value = ""
-    }
+    refresh()
   }
   
 </script>
@@ -33,15 +38,17 @@
     <hr class="mb-6" />
     
     <div class="cursor-help">
-      <p class="mb-8 font-extrabold break-words text-transparent text-4xl animate-pulse bg-clip-text bg-gradient-to-r from-indigo-500 to-fuchsia-500 dark:from-fuchsia-500 dark:to-red-500">
+      <p class="mb-14 font-extrabold break-words text-transparent text-4xl animate-pulse bg-clip-text bg-gradient-to-r from-indigo-500 to-fuchsia-500 dark:from-fuchsia-500 dark:to-red-500">
         A Work in Progress...
       </p>
       
-      <p class="mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-fuchsia-500">
-        {{sentence}}
-      </p>
+      <Header text="Generate a random sentence with this simple serverless function:"/>
+        
+      <button class="mb-6 rounded-full p-3 bg-indigo-500 dark:bg-sky-500 dark:from-fuchsia-500 dark:to-red-500 text-white" @click="generateRandomSentence">Generate a new random sentence</button>
       
-      <button class="rounded-full p-3 bg-indigo-500 dark:bg-sky-500 dark:from-fuchsia-500 dark:to-red-500 text-white" @click="generateRandomSentence">Generate Random Sentence</button>
+      <p class="mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500 dark:from-fuchsia-500 dark:to-red-500">
+        {{sentence()}}
+      </p>
     </div>
   </div>
 </template>
