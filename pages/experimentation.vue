@@ -11,8 +11,6 @@
   const sentenceData = ref(randomSentence)
   
   const sentence = () => {
-    console.log('randomSentence:', sentenceData)
-    
     if (sentenceData) {
       if (sentenceData.value) {
         const sentenceJson = JSON.parse(sentenceData.value)
@@ -21,10 +19,6 @@
     } else {
       return ""
     }
-  }
-  
-  const generateRandomSentence = () => {
-    refresh()
   }
   
 </script>
@@ -44,7 +38,7 @@
       
       <Header text="Generate a random sentence with this simple serverless function:"/>
         
-      <button class="mb-6 rounded-full p-3 bg-indigo-500 dark:bg-sky-500 dark:from-fuchsia-500 dark:to-red-500 text-white" @click="generateRandomSentence">Generate a new random sentence</button>
+      <button class="mb-6 rounded-full p-3 bg-indigo-500 dark:bg-sky-500 dark:from-fuchsia-500 dark:to-red-500 text-white" @click="refresh">Generate a new random sentence</button>
       
       <p class="mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500 dark:from-fuchsia-500 dark:to-red-500">
         {{sentence()}}
