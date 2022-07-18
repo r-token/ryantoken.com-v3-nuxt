@@ -14,6 +14,8 @@ export default defineNuxtConfig({
       apiBase: ''
     }
   },
+  
+  pageTransition: {'page-fade': true },
 
   content: {
     highlight: {
