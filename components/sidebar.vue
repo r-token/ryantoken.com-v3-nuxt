@@ -6,13 +6,25 @@
   import IconProjects from '~icons/material-symbols/rocket-launch-outline-rounded'
   import IconMeta from '~icons/octicon/stack-24'
   import IconExperimentation from '~icons/icon-park-solid/experiment-one'
+  import IconTwitter from '~icons/logos/twitter'
+  import IconGitHub from '~icons/logos/github-icon'
+  import IconLinkedIn from '~icons/logos/linkedin-icon'
+  import IconEmail from '~icons/ic/baseline-email'
+  import IconArrowOutward from '~icons/ic/round-arrow-outward'
 
   const mainNavigation = ref([
-    { href: '/blog', label: 'Blog', icon: 'icon-blog' },
+    { href: '/blog', label: 'Blog' },
     { href: '/about', label: 'About' },
     { href: '/projects', label: 'Projects' },
     { href: '/meta', label: 'Meta' },
     { href: '/experimentation', label: 'Experimentation' },
+  ])
+  
+  const externalNavigationLinks = ref([
+    { href: 'https://twitter.com/_ryantoken', label: 'Twitter' },
+    { href: 'https://github.com/r-token', label: 'GitHub' },
+    { href: 'https://linkedin.com/in/ryantoken', label: 'LinkedIn' },
+    { href: 'mailto:ryantoken13@gmail.com', label: 'Email' },
   ])
 
   const props = defineProps({
@@ -65,7 +77,7 @@
           leave-to="-translate-x-full"
           as="template"
         >
-          <div class="flex flex-col overflow-y-auto lg:hidden relative z-10 h-full w-72 w-64 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-100 dark:border-slate-700">
+          <div class="flex flex-col overflow-y-auto lg:hidden relative z-10 h-full w-56 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-100 dark:border-slate-700">
             <button 
               @click="toggleSidebar"
               class="absolute top-3 left-3 flex items-center justify-center w-10 h-10 text-gray-600 dark:text-gray-300 rounded-full focus:outline-none"
@@ -85,7 +97,7 @@
                 <NuxtLink :to="navItem.href" @click="updateSelectedPageAndToggleSidebar(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
                   <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
                     <div class="flex">
-                      <div class="mr-3">
+                      <div class="mr-3 mt-0.5">
                         <div v-if="navItem.label === 'Blog'">
                           <icon-blog class="text-indigo-500 dark:text-sky-400"/>
                         </div>
@@ -110,6 +122,40 @@
                   </div>
                 </NuxtLink>
               </div>
+              
+              <div class="text-sm text-gray-400 mx-6 mt-6 mb-2">
+                Online
+              </div>
+              
+              <div class="mb-0" v-for="(navItem, index) in externalNavigationLinks" :key="index" :value="navItem">
+                <NuxtLink :to="navItem.href" target="_blank" @click="updateSelectedPageAndToggleSidebar(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+                  <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
+                    <div class="mr-3 mt-0.5">
+                      <div v-if="navItem.label === 'Twitter'">
+                        <icon-twitter />
+                      </div>
+                      <div v-else-if="navItem.label === 'GitHub'">
+                        <icon-git-hub />
+                      </div>
+                      <div v-else-if="navItem.label === 'LinkedIn'">
+                        <icon-linked-in />
+                      </div>
+                      <div v-else-if="navItem.label === 'Email'">
+                        <icon-email class="text-gray-500 dark:text-gray-400"/>
+                      </div>
+                    </div>  
+                    
+                    <div>
+                      {{navItem.label}}
+                    </div>
+                    
+                    <div class="w-full">
+                      <icon-arrow-outward class="float-right text-gray-400"/>
+                    </div>              
+                  </div>
+                </NuxtLink>
+              </div>
+              
             </div>
           </div>
         </TransitionChild>
@@ -129,7 +175,7 @@
     </TransitionRoot>
 
     <!-- DESKTOP SIDEBAR -->
-    <div class="hidden transition-all delay-150 lg:block flex flex-col overflow-y-auto h-full w-64 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-200 dark:border-slate-600">
+    <div class="hidden transition-all delay-150 lg:block flex flex-col overflow-y-auto h-full w-56 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-200 dark:border-slate-600">
       <div class="text-2xl font-bold flex items-center px-6 py-2.5 pb-2">
         <NuxtLink to="/" @click="updateSelectedPage('index')">
           <LargeHeader class="mb-2 mt-2" text="Ryan Token" />
@@ -140,7 +186,7 @@
         <NuxtLink :to="navItem.href" @click="updateSelectedPage(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
             <div class="flex">
-              <div class="mr-3">
+              <div class="mr-3 mt-0.5">
                 <div v-if="navItem.label === 'Blog'">
                   <icon-blog class="text-indigo-500 dark:text-sky-400"/>
                 </div>
@@ -162,6 +208,39 @@
                 {{navItem.label}}
               </div>
             </div>
+          </div>
+        </NuxtLink>
+      </div>
+      
+      <div class="text-sm text-gray-400 mx-6 mt-6 mb-2">
+        Online
+      </div>
+      
+      <div class="mb-0" v-for="(navItem, index) in externalNavigationLinks" :key="index" :value="navItem">
+        <NuxtLink :to="navItem.href" target="_blank" @click="updateSelectedPage(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+          <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
+            <div class="mr-3 mt-0.5">
+              <div v-if="navItem.label === 'Twitter'">
+                <icon-twitter />
+              </div>
+              <div v-else-if="navItem.label === 'GitHub'">
+                <icon-git-hub />
+              </div>
+              <div v-else-if="navItem.label === 'LinkedIn'">
+                <icon-linked-in />
+              </div>
+              <div v-else-if="navItem.label === 'Email'">
+                <icon-email class="text-gray-500 dark:text-gray-400"/>
+              </div>
+            </div>  
+            
+            <div>
+              {{navItem.label}}
+            </div>
+            
+            <div class="w-full">
+              <icon-arrow-outward class="float-right text-gray-400"/>
+            </div>              
           </div>
         </NuxtLink>
       </div>
