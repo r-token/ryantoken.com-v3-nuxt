@@ -1,7 +1,7 @@
 <script setup>
   import IconShowSidebar from '~icons/zondicons/show-sidebar'
   
-  const emit = defineEmits(["toggleSidebar"])
+  const emit = defineEmits(["toggleSidebar", "updateCurrentPageFromTopbar"])
   const toggleSidebar = () => emit("toggleSidebar", true)
 </script>
 
@@ -17,7 +17,7 @@
         <icon-show-sidebar />
       </button>
 
-      <NuxtLink class="lg:hidden text-indigo-500 dark:text-slate-200 font-bold" to="/">Ryan Token</NuxtLink>
+      <NuxtLink to="/" class="lg:hidden text-indigo-500 dark:text-slate-200 font-bold">Ryan Token</NuxtLink>
     </div>
   </div>
 </template>

@@ -1,13 +1,16 @@
 <script setup>
+  const route = useRoute()
+  
   const sidebarOpened = ref(false)
+  const currentPage = ref(route.name)
   const toggleSidebar = (newState) => sidebarOpened.value = newState
 </script>
 
 <template>
   <div class="flex min-h-screen">
-    <Sidebar :sidebarOpened="sidebarOpened" @toggleSidebar="toggleSidebar($event)" />
+    <Sidebar :sidebarOpened="sidebarOpened" :initialPage="currentPage" :route="route" @toggleSidebar="toggleSidebar($event)" />
     <div class="flex-1 min-w-0">
-      <Topbar @toggleSidebar="toggleSidebar($event)" />
+      <Topbar @toggleSidebar="toggleSidebar($event)"  />
       <main class="p-6 dark:text-gray-300">
         <slot />
       </main>

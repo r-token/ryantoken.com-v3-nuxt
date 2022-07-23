@@ -15,17 +15,18 @@
     { href: '/experimentation', label: 'Experimentation' },
   ])
 
-  defineProps({
-    sidebarOpened: Boolean
+  const props = defineProps({
+    sidebarOpened: Boolean,
+    route: Object,
+    initialPage: String
   })
   
-  const route = useRoute()
-  const currentPage = ref(route.name)
+  const currentPage = ref(props.initialPage)
   
   const isCurrentPage = (page) => {
     const pageLowercased = page.toLowerCase()
     const currentPageLowercased = currentPage.value.toLowerCase()
-    const routeNameLowercased = route.name.toLowerCase()
+    const routeNameLowercased = props.route.name.toLowerCase()
 
     if (pageLowercased === currentPageLowercased || pageLowercased === routeNameLowercased || pageLowercased + "-slug" === routeNameLowercased) {
       return true
@@ -35,7 +36,7 @@
   }
   
   const normalBackground = "flex w-full py-1 px-2 rounded-md"
-  const selectedBackground = "bg-slate-300 dark:bg-gray-300 text-gray-600 dark:text-gray-700 flex w-full py-1 px-2 rounded-md"
+  const selectedBackground = "bg-slate-300 dark:bg-slate-600 text-gray-600 dark:text-gray-300 flex w-full py-1 px-2 rounded-md"
 
   const emit = defineEmits(["toggleSidebar"])
   const toggleSidebar = () => emit("toggleSidebar", false)
@@ -43,17 +44,12 @@
   const updateSelectedPage = (page) => {
     currentPage.value = page
   }
-  
-  const updateSelectedPageAndToggleSidebar = (page) => {
-    currentPage.value = page
-    toggleSidebar()
-  }
 </script>
 
 <template>
   <div class="h-screen sticky top-0">
     <!-- MOBILE SIDEBAR -->
-    <TransitionRoot :show="sidebarOpened">
+    <TransitionRoot :show="props.sidebarOpened">
       <Dialog as="div" @close="toggleSidebar" class="fixed inset-0 z-40 lg:hidden">
         <TransitionChild 
           enter="transition ease-in-out duration-300 transform"
@@ -74,14 +70,14 @@
               <icon-show-sidebar />
             </button>
             <div class="text-2xl font-bold flex items-center px-6 pt-16 pb-2">
-              <NuxtLink @click="updateSelectedPageAndToggleSidebar('Index')" to="/">
+              <NuxtLink @click="toggleSidebar" to="/">
                 <LargeHeader class="mb-2" text="Ryan Token" />
               </NuxtLink>
             </div>
 
             <div class="flex-1">
               <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
-                <NuxtLink :to="navItem.href" @click="updateSelectedPageAndToggleSidebar(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+                <NuxtLink :to="navItem.href" @click="toggleSidebar" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
                   <div class="hover:bg-slate-300 hover:dark:bg-gray-300 hover:dark:text-gray-700" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
                     <div class="flex">
                       <div class="mr-3">
@@ -137,7 +133,7 @@
 
       <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
         <NuxtLink :to="navItem.href" @click="updateSelectedPage(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
-          <div class="hover:bg-slate-300 hover:dark:bg-gray-300 hover:dark:text-gray-700" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
+          <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
             <div class="flex">
               <div class="mr-3">
                 <div v-if="navItem.label === 'Blog'">
