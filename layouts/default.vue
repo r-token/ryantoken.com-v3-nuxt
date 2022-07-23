@@ -4,10 +4,7 @@
   const sidebarOpened = ref(false)
   const currentPage = ref(route.name)
   const toggleSidebar = (newState) => sidebarOpened.value = newState
-  const updateSelectedPageFromTopbar = (newSelectedPage) => {
-    currentPage.value = newSelectedPage
-    console.log('new currentPage:', currentPage.value)
-  }
+  const updateSelectedPageFromTopbar = (newSelectedPage) => currentPage.value = newSelectedPage
 </script>
 
 <template>
