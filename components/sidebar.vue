@@ -18,9 +18,36 @@
   defineProps({
     sidebarOpened: Boolean
   })
+  
+  const route = useRoute()
+  const currentPage = ref(route.name)
+  
+  const isCurrentPage = (page) => {
+    const pageLowercased = page.toLowerCase()
+    const currentPageLowercased = currentPage.value.toLowerCase()
+    const routeNameLowercased = route.name.toLowerCase()
+
+    if (pageLowercased === currentPageLowercased || pageLowercased === routeNameLowercased || pageLowercased + "-slug" === routeNameLowercased) {
+      return true
+    } else {
+      return false
+    }
+  }
+  
+  const normalBackground = "flex w-full py-1 px-2 rounded-md"
+  const selectedBackground = "bg-slate-300 dark:bg-gray-300 text-gray-600 dark:text-gray-700 flex w-full py-1 px-2 rounded-md"
 
   const emit = defineEmits(["toggleSidebar"])
   const toggleSidebar = () => emit("toggleSidebar", false)
+  
+  const updateSelectedPage = (page) => {
+    currentPage.value = page
+  }
+  
+  const updateSelectedPageAndToggleSidebar = (page) => {
+    currentPage.value = page
+    toggleSidebar()
+  }
 </script>
 
 <template>
@@ -54,26 +81,31 @@
 
             <div class="flex-1">
               <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
-                <NuxtLink @click="toggleSidebar" :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 dark:text-gray-300 hover:text-indigo-500 hover:dark:text-slate-200">
-                  <div class="mr-3">
-                    <div v-if="navItem.label === 'Blog'">
-                      <icon-blog class="text-indigo-500 dark:text-sky-400"/>
+                <NuxtLink :to="navItem.href" @click="updateSelectedPageAndToggleSidebar(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+                  <div class="hover:bg-slate-300 hover:dark:bg-gray-300 hover:dark:text-gray-700" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
+                    <div class="flex">
+                      <div class="mr-3">
+                        <div v-if="navItem.label === 'Blog'">
+                          <icon-blog class="text-indigo-500 dark:text-sky-400"/>
+                        </div>
+                        <div v-else-if="navItem.label === 'About'">
+                          <icon-profile class="text-pink-500 dark:text-pink-400" />
+                        </div>
+                        <div v-else-if="navItem.label === 'Projects'">
+                          <icon-projects class="text-red-500 dark:text-red-400" />
+                        </div>
+                        <div v-else-if="navItem.label === 'Meta'">
+                          <icon-meta class="text-yellow-500 dark:text-yellow-400"/>
+                        </div>
+                        <div v-else-if="navItem.label === 'Experimentation'">
+                          <icon-experimentation class="text-green-500 dark:text-green-400" />
+                        </div>
+                      </div>  
+                    
+                      <div>
+                        {{navItem.label}}
+                      </div>
                     </div>
-                    <div v-else-if="navItem.label === 'About'">
-                      <icon-profile class="text-pink-500 dark:text-pink-400" />
-                    </div>
-                    <div v-else-if="navItem.label === 'Projects'">
-                      <icon-projects class="text-red-500 dark:text-red-400" />
-                    </div>
-                    <div v-else-if="navItem.label === 'Meta'">
-                      <icon-meta class="text-yellow-500 dark:text-yellow-400"/>
-                    </div>
-                    <div v-else-if="navItem.label === 'Experimentation'">
-                      <icon-experimentation class="text-green-500 dark:text-green-400" />
-                    </div>
-                  </div>
-                  <div>
-                    {{navItem.label}}
                   </div>
                 </NuxtLink>
               </div>
@@ -96,34 +128,39 @@
     </TransitionRoot>
 
     <!-- DESKTOP SIDEBAR -->
-    <div class="hidden lg:block flex flex-col overflow-y-auto h-full w-64 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-100 dark:border-slate-700">
+    <div class="hidden transition-all delay-150 lg:block flex flex-col overflow-y-auto h-full w-64 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-200 dark:border-slate-600">
       <div class="text-2xl font-bold flex items-center px-6 py-2.5 pb-2">
-        <NuxtLink to="/">
+        <NuxtLink to="/" @click="updateSelectedPage('Index')">
           <LargeHeader class="mb-2 mt-2" text="Ryan Token" />
         </NuxtLink>
       </div>
 
       <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
-        <NuxtLink :to="navItem.href" class="flex items-center px-6 py-2.5 text-gray-500 dark:text-gray-300 hover:text-indigo-500 hover:dark:text-slate-200">
-          <div class="mr-3">
-            <div v-if="navItem.label === 'Blog'">
-              <icon-blog class="text-indigo-500 dark:text-sky-400"/>
+        <NuxtLink :to="navItem.href" @click="updateSelectedPage(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+          <div class="hover:bg-slate-300 hover:dark:bg-gray-300 hover:dark:text-gray-700" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
+            <div class="flex">
+              <div class="mr-3">
+                <div v-if="navItem.label === 'Blog'">
+                  <icon-blog class="text-indigo-500 dark:text-sky-400"/>
+                </div>
+                <div v-else-if="navItem.label === 'About'">
+                  <icon-profile class="text-pink-500 dark:text-pink-400" />
+                </div>
+                <div v-else-if="navItem.label === 'Projects'">
+                  <icon-projects class="text-red-500 dark:text-red-400" />
+                </div>
+                <div v-else-if="navItem.label === 'Meta'">
+                  <icon-meta class="text-yellow-500 dark:text-yellow-400"/>
+                </div>
+                <div v-else-if="navItem.label === 'Experimentation'">
+                  <icon-experimentation class="text-green-500 dark:text-green-400" />
+                </div>
+              </div>  
+            
+              <div>
+                {{navItem.label}}
+              </div>
             </div>
-            <div v-else-if="navItem.label === 'About'">
-              <icon-profile class="text-pink-500 dark:text-pink-400" />
-            </div>
-            <div v-else-if="navItem.label === 'Projects'">
-              <icon-projects class="text-red-500 dark:text-red-400" />
-            </div>
-            <div v-else-if="navItem.label === 'Meta'">
-              <icon-meta class="text-yellow-500 dark:text-yellow-400"/>
-            </div>
-            <div v-else-if="navItem.label === 'Experimentation'">
-              <icon-experimentation class="text-green-500 dark:text-green-400" />
-            </div>
-          </div>
-          <div>
-            {{navItem.label}}
           </div>
         </NuxtLink>
       </div>
