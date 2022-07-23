@@ -83,7 +83,7 @@
             <div class="flex-1">
               <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
                 <NuxtLink :to="navItem.href" @click="updateSelectedPageAndToggleSidebar(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
-                  <div class="hover:bg-slate-300 hover:dark:bg-gray-300 hover:dark:text-gray-700" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
+                  <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
                     <div class="flex">
                       <div class="mr-3">
                         <div v-if="navItem.label === 'Blog'">
