@@ -3,6 +3,7 @@
   
   const emit = defineEmits(["toggleSidebar", "updateCurrentPageFromTopbar"])
   const toggleSidebar = () => emit("toggleSidebar", true)
+  const updateSelectedPage = () => emit("updateSelectedPageFromTopbar", "index")
 </script>
 
 <template>
@@ -17,7 +18,7 @@
         <icon-show-sidebar />
       </button>
 
-      <NuxtLink to="/" class="lg:hidden text-indigo-500 dark:text-slate-200 font-bold">Ryan Token</NuxtLink>
+      <NuxtLink to="/" @click="updateSelectedPage" class="lg:hidden text-indigo-500 dark:text-slate-200 font-bold">Ryan Token</NuxtLink>
     </div>
   </div>
 </template>

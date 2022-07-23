@@ -25,7 +25,7 @@
   
   const isCurrentPage = (page) => {
     const pageLowercased = page.toLowerCase()
-    const currentPageLowercased = currentPage.value.toLowerCase()
+    const currentPageLowercased = currentPage.value
     const routeNameLowercased = props.route.name.toLowerCase()
 
     if (pageLowercased === currentPageLowercased || pageLowercased === routeNameLowercased || pageLowercased + "-slug" === routeNameLowercased) {
@@ -43,6 +43,11 @@
   
   const updateSelectedPage = (page) => {
     currentPage.value = page
+  }
+  
+  const updateSelectedPageAndToggleSidebar = (page) => {
+    currentPage.value = page
+    toggleSidebar()
   }
 </script>
 
@@ -70,14 +75,14 @@
               <icon-show-sidebar />
             </button>
             <div class="text-2xl font-bold flex items-center px-6 pt-16 pb-2">
-              <NuxtLink @click="toggleSidebar" to="/">
+              <NuxtLink @click="updateSelectedPageAndToggleSidebar('index')" to="/">
                 <LargeHeader class="mb-2" text="Ryan Token" />
               </NuxtLink>
             </div>
 
             <div class="flex-1">
               <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
-                <NuxtLink :to="navItem.href" @click="toggleSidebar" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+                <NuxtLink :to="navItem.href" @click="updateSelectedPageAndToggleSidebar(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
                   <div class="hover:bg-slate-300 hover:dark:bg-gray-300 hover:dark:text-gray-700" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
                     <div class="flex">
                       <div class="mr-3">
@@ -126,7 +131,7 @@
     <!-- DESKTOP SIDEBAR -->
     <div class="hidden transition-all delay-150 lg:block flex flex-col overflow-y-auto h-full w-64 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-200 dark:border-slate-600">
       <div class="text-2xl font-bold flex items-center px-6 py-2.5 pb-2">
-        <NuxtLink to="/" @click="updateSelectedPage('Index')">
+        <NuxtLink to="/" @click="updateSelectedPage('index')">
           <LargeHeader class="mb-2 mt-2" text="Ryan Token" />
         </NuxtLink>
       </div>
