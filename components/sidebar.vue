@@ -74,7 +74,7 @@
               <icon-show-sidebar />
             </button>
             <div class="text-2xl font-bold flex items-center px-6 pt-16 pb-2">
-              <NuxtLink @click="toggleSidebar" to="/">
+              <NuxtLink @click="updateSelectedPageAndToggleSidebar('Index')" to="/">
                 <LargeHeader class="mb-2" text="Ryan Token" />
               </NuxtLink>
             </div>
