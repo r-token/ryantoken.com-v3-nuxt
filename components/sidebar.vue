@@ -7,8 +7,8 @@
   import IconMeta from '~icons/octicon/stack-24'
   import IconExperimentation from '~icons/icon-park-solid/experiment-one'
   import IconTwitter from '~icons/logos/twitter'
-  import IconGitHub from '~icons/logos/github-icon'
-  import IconLinkedIn from '~icons/logos/linkedin-icon'
+  import IconGitHub from '~icons/mdi/github'
+  import IconLinkedIn from '~icons/mdi/linkedin'
   import IconEmail from '~icons/ic/baseline-email'
   import IconArrowOutward from '~icons/ic/round-arrow-outward'
 
@@ -18,6 +18,12 @@
     { href: '/projects', label: 'Projects' },
     { href: '/meta', label: 'Meta' },
     { href: '/experimentation', label: 'Experimentation' },
+  ])
+  
+  const myProjects = ref([
+    { href: 'https://apps.apple.com/us/app/outrank/id1588983785', label: 'Outrank' },
+    { href: 'https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550', label: 'CatchUp' },
+    { href: 'https://podcasts.apple.com/us/podcast/the-golden-hurricast/id1435008302?mt=2', label: 'Podcast' },
   ])
   
   const externalNavigationLinks = ref([
@@ -77,7 +83,7 @@
           leave-to="-translate-x-full"
           as="template"
         >
-          <div class="flex flex-col overflow-y-auto lg:hidden relative z-10 h-full w-56 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-100 dark:border-slate-700">
+          <div class="flex pb-6 flex-col overflow-y-auto lg:hidden relative z-10 h-full w-56 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-100 dark:border-slate-700">
             <button 
               @click="toggleSidebar"
               class="absolute top-3 left-3 flex items-center justify-center w-10 h-10 text-gray-600 dark:text-gray-300 rounded-full focus:outline-none"
@@ -91,6 +97,10 @@
                 <LargeHeader class="mb-2" text="Ryan Token" />
               </NuxtLink>
             </div>
+            
+            <div class="text-sm text-gray-400 mx-6 mt-6 mb-2">
+              Me
+            </div>
 
             <div class="flex-1">
               <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
@@ -99,19 +109,19 @@
                     <div class="flex">
                       <div class="mr-3 mt-0.5">
                         <div v-if="navItem.label === 'Blog'">
-                          <icon-blog class="text-indigo-500 dark:text-sky-400"/>
+                          <IconBlog class="text-indigo-500 dark:text-sky-400"/>
                         </div>
                         <div v-else-if="navItem.label === 'About'">
-                          <icon-profile class="text-pink-500 dark:text-pink-400" />
+                          <IconProfile class="text-pink-500 dark:text-pink-400" />
                         </div>
                         <div v-else-if="navItem.label === 'Projects'">
-                          <icon-projects class="text-red-500 dark:text-red-400" />
+                          <IconProjects class="text-red-500 dark:text-red-400" />
                         </div>
                         <div v-else-if="navItem.label === 'Meta'">
-                          <icon-meta class="text-yellow-500 dark:text-yellow-400"/>
+                          <IconMeta class="text-yellow-500 dark:text-yellow-400"/>
                         </div>
                         <div v-else-if="navItem.label === 'Experimentation'">
-                          <icon-experimentation class="text-green-500 dark:text-green-400" />
+                          <IconExperimentation class="text-green-500 dark:text-green-400" />
                         </div>
                       </div>  
                     
@@ -119,6 +129,36 @@
                         {{navItem.label}}
                       </div>
                     </div>
+                  </div>
+                </NuxtLink>
+              </div>
+              
+              <div class="text-sm text-gray-400 mx-6 mt-6 mb-2">
+                My Stuff
+              </div>
+              
+              <div class="mb-0" v-for="(navItem, index) in myProjects" :key="index" :value="navItem">
+                <NuxtLink :to="navItem.href" target="_blank" @click="updateSelectedPageAndToggleSidebar(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+                  <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
+                    <div class="mr-3 mt-0.5">
+                      <div v-if="navItem.label === 'Outrank'">
+                        <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded-md w-11" />
+                      </div>
+                      <div v-else-if="navItem.label === 'CatchUp'">
+                        <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded-md w-11" />
+                      </div>
+                      <div v-else-if="navItem.label === 'Podcast'">
+                        <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded-md w-11" />
+                      </div>
+                    </div>  
+                    
+                    <div>
+                      {{navItem.label}}
+                    </div>
+                    
+                    <div class="w-full">
+                      <IconArrowOutward class="float-right text-gray-400"/>
+                    </div>              
                   </div>
                 </NuxtLink>
               </div>
@@ -132,16 +172,16 @@
                   <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
                     <div class="mr-3 mt-0.5">
                       <div v-if="navItem.label === 'Twitter'">
-                        <icon-twitter />
+                        <IconTwitter />
                       </div>
                       <div v-else-if="navItem.label === 'GitHub'">
-                        <icon-git-hub />
+                        <IconGitHub class="text-black dark:text-white" />
                       </div>
                       <div v-else-if="navItem.label === 'LinkedIn'">
-                        <icon-linked-in />
+                        <IconLinkedIn class="text-sky-700 dark:text-gray-200" />
                       </div>
                       <div v-else-if="navItem.label === 'Email'">
-                        <icon-email class="text-gray-500 dark:text-gray-400"/>
+                        <IconEmail class="text-gray-500 dark:text-gray-200"/>
                       </div>
                     </div>  
                     
@@ -150,12 +190,11 @@
                     </div>
                     
                     <div class="w-full">
-                      <icon-arrow-outward class="float-right text-gray-400"/>
+                      <IconArrowOutward class="float-right text-gray-400"/>
                     </div>              
                   </div>
                 </NuxtLink>
               </div>
-              
             </div>
           </div>
         </TransitionChild>
@@ -181,6 +220,10 @@
           <LargeHeader class="mb-2 mt-2" text="Ryan Token" />
         </NuxtLink>
       </div>
+      
+      <div class="text-sm text-gray-400 mx-6 mt-2 mb-2">
+        Me
+      </div>
 
       <div class="mb-0" v-for="(navItem, index) in mainNavigation" :key="index" :value="navItem">
         <NuxtLink :to="navItem.href" @click="updateSelectedPage(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
@@ -188,19 +231,19 @@
             <div class="flex">
               <div class="mr-3 mt-0.5">
                 <div v-if="navItem.label === 'Blog'">
-                  <icon-blog class="text-indigo-500 dark:text-sky-400"/>
+                  <IconBlog class="text-indigo-500 dark:text-sky-400"/>
                 </div>
                 <div v-else-if="navItem.label === 'About'">
-                  <icon-profile class="text-pink-500 dark:text-pink-400" />
+                  <IconProfile class="text-pink-500 dark:text-pink-400" />
                 </div>
                 <div v-else-if="navItem.label === 'Projects'">
-                  <icon-projects class="text-red-500 dark:text-red-400" />
+                  <IconProjects class="text-red-500 dark:text-red-400" />
                 </div>
                 <div v-else-if="navItem.label === 'Meta'">
-                  <icon-meta class="text-yellow-500 dark:text-yellow-400"/>
+                  <IconMeta class="text-yellow-500 dark:text-yellow-400"/>
                 </div>
                 <div v-else-if="navItem.label === 'Experimentation'">
-                  <icon-experimentation class="text-green-500 dark:text-green-400" />
+                  <IconExperimentation class="text-green-500 dark:text-green-400" />
                 </div>
               </div>  
             
@@ -208,6 +251,36 @@
                 {{navItem.label}}
               </div>
             </div>
+          </div>
+        </NuxtLink>
+      </div>
+      
+      <div class="text-sm text-gray-400 mx-6 mt-6 mb-2">
+        My Stuff
+      </div>
+      
+      <div class="mb-0" v-for="(navItem, index) in myProjects" :key="index" :value="navItem">
+        <NuxtLink :to="navItem.href" target="_blank" @click="updateSelectedPage(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+          <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
+            <div class="mr-3 mt-0.5">
+              <div v-if="navItem.label === 'Outrank'">
+                <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded-md w-11" />
+              </div>
+              <div v-else-if="navItem.label === 'CatchUp'">
+                <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded-md w-11" />
+              </div>
+              <div v-else-if="navItem.label === 'Podcast'">
+                <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded-md w-11" />
+              </div>
+            </div>  
+            
+            <div>
+              {{navItem.label}}
+            </div>
+            
+            <div class="w-full">
+              <IconArrowOutward class="float-right text-gray-400"/>
+            </div>              
           </div>
         </NuxtLink>
       </div>
@@ -221,16 +294,16 @@
           <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
             <div class="mr-3 mt-0.5">
               <div v-if="navItem.label === 'Twitter'">
-                <icon-twitter />
+                <IconTwitter />
               </div>
               <div v-else-if="navItem.label === 'GitHub'">
-                <icon-git-hub />
+                <IconGitHub class="text-black dark:text-white" />
               </div>
               <div v-else-if="navItem.label === 'LinkedIn'">
-                <icon-linked-in />
+                <IconLinkedIn class="text-sky-700 dark:text-gray-200" />
               </div>
               <div v-else-if="navItem.label === 'Email'">
-                <icon-email class="text-gray-500 dark:text-gray-400"/>
+                <IconEmail class="text-gray-500 dark:text-gray-200"/>
               </div>
             </div>  
             
