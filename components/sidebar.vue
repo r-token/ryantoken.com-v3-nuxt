@@ -142,13 +142,13 @@
                   <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
                     <div class="mr-3 mt-0.5">
                       <div v-if="navItem.label === 'Outrank'">
-                        <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded-md w-11" />
+                        <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded w-11" />
                       </div>
                       <div v-else-if="navItem.label === 'CatchUp'">
-                        <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded-md w-11" />
+                        <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded w-11" />
                       </div>
                       <div v-else-if="navItem.label === 'Podcast'">
-                        <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded-md w-11" />
+                        <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded w-11" />
                       </div>
                     </div>  
                     
@@ -264,13 +264,13 @@
           <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
             <div class="mr-3 mt-0.5">
               <div v-if="navItem.label === 'Outrank'">
-                <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded-md w-11" />
+                <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded w-11" />
               </div>
               <div v-else-if="navItem.label === 'CatchUp'">
-                <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded-md w-11" />
+                <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded w-11" />
               </div>
               <div v-else-if="navItem.label === 'Podcast'">
-                <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded-md w-11" />
+                <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded w-11" />
               </div>
             </div>  
             
