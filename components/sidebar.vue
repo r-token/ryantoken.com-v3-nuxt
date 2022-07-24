@@ -23,7 +23,7 @@
   const myProjects = ref([
     { href: 'https://apps.apple.com/us/app/outrank/id1588983785', label: 'Outrank' },
     { href: 'https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550', label: 'CatchUp' },
-    { href: 'https://podcasts.apple.com/us/podcast/the-golden-hurricast/id1435008302?mt=2', label: 'Podcast' },
+    { href: 'https://podcasts.apple.com/us/podcast/the-golden-hurricast/id1435008302?mt=2', label: 'Hurricast' },
   ])
   
   const externalNavigationLinks = ref([
@@ -147,7 +147,7 @@
                       <div v-else-if="navItem.label === 'CatchUp'">
                         <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded w-11" />
                       </div>
-                      <div v-else-if="navItem.label === 'Podcast'">
+                      <div v-else-if="navItem.label === 'Hurricast'">
                         <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded w-11" />
                       </div>
                     </div>  
@@ -269,7 +269,7 @@
               <div v-else-if="navItem.label === 'CatchUp'">
                 <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded w-11" />
               </div>
-              <div v-else-if="navItem.label === 'Podcast'">
+              <div v-else-if="navItem.label === 'Hurricast'">
                 <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded w-11" />
               </div>
             </div>  
