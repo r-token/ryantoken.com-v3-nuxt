@@ -4,7 +4,6 @@
   })
   
   const config = useRuntimeConfig()
-  console.log('api base:', config.public.apiBase)
   
   const { data: randomSentence, refresh } = await useFetch(`${config.public.apiBase}/sentence-generator`)
   

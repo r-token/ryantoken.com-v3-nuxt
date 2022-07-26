@@ -3,6 +3,11 @@
     title: 'Ryan Token'
   })
 
+  const config = useRuntimeConfig()
+  const { data, refresh } = await useFetch(`${config.public.customApiBase}/resume`)
+  
+  const signedUrlForResume = ref(JSON.parse(data.value))
+
   const recentBlogPosts = await queryContent('/blog')
     .sort({ date: -1 }) // show latest articles first
     .where({ _partial: false }) // exclude the Partial files
@@ -19,7 +24,7 @@
     </p>
 
     <p class="text-gray-600 dark:text-gray-400 mb-4">
-      I'm currently a full-stack software engineer at <ExternalLink url="https://new.trystoryboard.com" text="Storyboard" />. My primary focus there is on <ExternalLink url="https://www.serverless.com/framework" text="serverless web apps" />, but I build software that touches every part of the company.
+      I'm <ExternalLink :url="signedUrlForResume" text="currently" @click="refresh" /> a full-stack software engineer at <ExternalLink url="https://new.trystoryboard.com" text="Storyboard" />. My primary focus there is on <ExternalLink url="https://www.serverless.com/framework" text="serverless web apps" />, but I build software that touches every part of the company.
     </p>
     
     <p class="text-gray-600 dark:text-gray-400 mb-6">
