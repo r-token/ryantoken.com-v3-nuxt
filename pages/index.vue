@@ -24,7 +24,7 @@
     </p>
 
     <p class="text-gray-600 dark:text-gray-400 mb-4">
-      I'm <ExternalLink :url="signedUrlForResume" text="currently" @click="refresh" /> a full-stack software engineer at <ExternalLink url="https://new.trystoryboard.com" text="Storyboard" />. My primary focus there is on <ExternalLink url="https://www.serverless.com/framework" text="serverless web apps" />, but I build software that touches every part of the company.
+      I'm <a :href="signedUrlForResume" @click="refresh" target="_blank" class="text-indigo-500 dark:text-sky-300">currently</a> a full-stack software engineer at <ExternalLink url="https://new.trystoryboard.com" text="Storyboard" />. My primary focus there is on <ExternalLink url="https://www.serverless.com/framework" text="serverless web apps" />, but I build software that touches every part of the company.
     </p>
     
     <p class="text-gray-600 dark:text-gray-400 mb-6">

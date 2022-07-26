@@ -1,42 +1,9 @@
-# Content v2 Minimal Starter
+## ryantoken.com
 
-Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
+🚀 🖥️ 🚀
 
-## Setup
+ryantoken.com was created using <a href="https://vuejs.org" target="_blank">Vue</a>, <a href="https://nuxtjs.org" target="_blank">Nuxt 3</a>, and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>. It's all hosted on <a href="https://netlify.com" target="_blank">Netlify</a>.
 
-Make sure to install the dependencies:
+The blog is generated with <a href="https://content.nuxtjs.org" target="_blank">Nuxt Content</a> and <a href="https://content.nuxtjs.org/guide/writing/markdown" target="_blank">Markdown</a>.
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
+I will have a short blog post on my experience building the site this way in the future.
