@@ -1,0 +1,78 @@
+console: true
+org: rtoken
+service: ryantoken-v3
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  stage: dev
+  profile: default
+  region: us-east-2
+  environment:
+    STAGE: ${opt:stage, self:provider.stage}
+  
+  httpApi:
+    shouldStartNameWithService: true
+    cors:
+      allowedOrigins:
+        - https://ryantoken.com
+        - https://ryantoken-v3.netlify.app
+      allowedHeaders:
+        - Content-Type
+        - Authorization
+      allowedMethods:
+        - GET
+      allowCredentials: true
+      exposedResponseHeaders:
+        - Special-Response-Header
+      maxAge: 6000
+    
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - s3:GetObject
+          Resource:
+            - 'arn:aws:s3:::ryan-token-resume-dev/*'
+            - 'arn:aws:s3:::ryan-token-resume-prod/*'
+            
+params:
+  dev:
+    resumeBucket: ryan-token-resume-dev
+  prod:
+    resumeBucket: ryan-token-resume-prod
+    
+custom:
+  warmup:
+    default:
+      enabled: false
+      package:
+        individually: true
+
+functions:
+  getResumeUrl:
+    handler: handler.getResumeFromS3
+    warmup:
+      default:
+        enabled: prod
+    events:
+      - httpApi:
+          path: /resume
+          method: get
+
+package:
+  individually: true
+  excludeDevDependencies: true
+  
+plugins:
+  - serverless-plugin-common-excludes
+  - serverless-plugin-warmup
+  
+resources:
+  Resources:
+    SBAudioHotfolderBucket:
+      Type: 'AWS::S3::Bucket'
+      Properties:
+        BucketName: ${param:resumeBucket}
