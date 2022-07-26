@@ -4,9 +4,15 @@
   })
 
   const config = useRuntimeConfig()
-  const { data, refresh } = await useFetch(`${config.public.customApiBase}/resume`)
+  const { data, pending, error, refresh } = await useFetch(`${config.public.customApiBase}/resume`)
   
-  const signedUrlForResume = ref(JSON.parse(data.value))
+  const computedUrlForResume = () => {
+    if (!pending.value && !error.value) {
+      return JSON.parse(data.value)
+    } else {
+      return "#"
+    }
+  }
 
   const recentBlogPosts = await queryContent('/blog')
     .sort({ date: -1 }) // show latest articles first
@@ -19,12 +25,15 @@
   <div>
     <LargeHeader text="Hi, I'm Ryan" />
       
+    <p v-if="pending">Loading signed URL</p>
+    <p v-if="error">Error loading signed URL</p>
+      
     <p class="text-gray-600 dark:text-gray-400 mb-4">
-      I'm a <ExternalLink url="https://github.com/r-token" text="software engineer" />, <ExternalLink url="https://thegoldenhurricast.com/podcast" text="podcaster" />, <NuxtLink class="text-indigo-500 dark:text-sky-300" to="https://ryantoken.com/blog">writer</NuxtLink>, <ExternalLink url="https://thegoldenhurricast.com" text="college sports fan" />, and general techie.
+      I'm a <ExternalLink url="https://github.com/r-token" text="software engineer"/>, <ExternalLink url="https://thegoldenhurricast.com/podcast" text="podcaster" />, <NuxtLink class="text-indigo-500 dark:text-sky-300" to="https://ryantoken.com/blog">writer</NuxtLink>, <ExternalLink url="https://thegoldenhurricast.com" text="college sports fan" />, and general techie.
     </p>
 
     <p class="text-gray-600 dark:text-gray-400 mb-4">
-      I'm <a :href="signedUrlForResume" @click="refresh" target="_blank" class="text-indigo-500 dark:text-sky-300">currently</a> a full-stack software engineer at <ExternalLink url="https://new.trystoryboard.com" text="Storyboard" />. My primary focus there is on <ExternalLink url="https://www.serverless.com/framework" text="serverless web apps" />, but I build software that touches every part of the company.
+      I'm <ExternalLink :to="computedUrlForResume()" text="currently" @click="refresh" /> a full-stack software engineer at <ExternalLink url="https://new.trystoryboard.com" text="Storyboard" />. My primary focus there is on <ExternalLink url="https://www.serverless.com/framework" text="serverless web apps" />, but I build software that touches every part of the company.
     </p>
     
     <p class="text-gray-600 dark:text-gray-400 mb-6">
