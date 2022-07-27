@@ -1,4 +1,3 @@
-console: true
 org: rtoken
 service: ryantoken-v3
 frameworkVersion: '3'

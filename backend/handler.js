@@ -21,7 +21,7 @@ const getResumeFromS3 = async (event, context) => {
   const s3Params = {
     Bucket: resumeBucket,
     Key: 'Ryan Token Resume.pdf',
-    Expires: 300
+    Expires: 604800 // max 7 days
   }
   
   try {
