@@ -178,10 +178,10 @@
                         <IconGitHub class="text-black dark:text-white" />
                       </div>
                       <div v-else-if="navItem.label === 'LinkedIn'">
-                        <IconLinkedIn class="text-sky-700 dark:text-gray-200" />
+                        <IconLinkedIn class="text-sky-700 dark:text-cyan-500" />
                       </div>
                       <div v-else-if="navItem.label === 'Email'">
-                        <IconEmail class="text-gray-500 dark:text-gray-200"/>
+                        <IconEmail class="text-gray-500 dark:text-gray-300"/>
                       </div>
                     </div>  
                     
@@ -300,10 +300,10 @@
                 <IconGitHub class="text-black dark:text-white" />
               </div>
               <div v-else-if="navItem.label === 'LinkedIn'">
-                <IconLinkedIn class="text-sky-700 dark:text-gray-200" />
+                <IconLinkedIn class="text-sky-700 dark:text-cyan-500" />
               </div>
               <div v-else-if="navItem.label === 'Email'">
-                <IconEmail class="text-gray-500 dark:text-gray-200"/>
+                <IconEmail class="text-gray-500 dark:text-gray-300"/>
               </div>
             </div>  
             
