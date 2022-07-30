@@ -34,48 +34,45 @@ provider:
           Action:
             - s3:GetObject
           Resource:
-            - 'arn:aws:s3:::ryan-token-resume-dev/*'
-            - 'arn:aws:s3:::ryan-token-resume-prod/*'
-            
+            - 'arn:aws:s3:::ryan-token-cv-dev/*'
+            - 'arn:aws:s3:::ryan-token-cv-prod/*'
+  
 params:
   dev:
-    resumeBucket: ryan-token-resume-dev
+    cvBucket: ryan-token-cv-dev
   prod:
-    resumeBucket: ryan-token-resume-prod
-    
+    cvBucket: ryan-token-cv-prod
+  
 custom:
   warmup:
     default:
       enabled: false
-      package:
-        individually: true
+  esbuild:
+    bundle: true
+    minify: true
 
 functions:
-  getResumeUrl:
-    handler: handler.getResumeFromS3
+  getCvUrl:
+    handler: handler.getCvFromS3
     warmup:
       default:
         enabled: prod
     events:
       - httpApi:
-          path: /resume
+          path: /cv
           method: get
 
 package:
   individually: true
-  excludeDevDependencies: true
-  patterns:
-    - '!**'
-    - 'node_modules/**'
-    - 'handler.js'
   
 plugins:
   - serverless-plugin-common-excludes
   - serverless-plugin-warmup
+  - serverless-esbuild
   
 resources:
   Resources:
-    SBAudioHotfolderBucket:
+    CVBucket:
       Type: 'AWS::S3::Bucket'
       Properties:
-        BucketName: ${param:resumeBucket}
+        BucketName: ${param:cvBucket}
