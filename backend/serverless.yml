@@ -64,6 +64,10 @@ functions:
 package:
   individually: true
   excludeDevDependencies: true
+  patterns:
+    - '!**'
+    - 'node_modules/**'
+    - 'handler.js'
   
 plugins:
   - serverless-plugin-common-excludes

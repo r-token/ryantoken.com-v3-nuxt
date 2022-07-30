@@ -1,8 +1,5 @@
 'use strict'
 
-const AWS = require('aws-sdk')
-const s3 = new AWS.S3()
-
 const getResumeFromS3 = async (event, context) => {
   console.log('event:', JSON.stringify(event, null, 2))
   
@@ -10,6 +7,10 @@ const getResumeFromS3 = async (event, context) => {
     return 'Lambda is warm!'
   }
   
+  const { getSignedUrl } = require('@aws-sdk/s3-request-presigner')
+  const { S3Client, GetObjectCommand } = require('@aws-sdk/client-s3')
+  
+  const s3Client = new S3Client({})
   const stage = process.env.STAGE
   const resumeBucket = stage === 'prod' ? 'ryan-token-resume-prod' : 'ryan-token-resume-dev'
   
@@ -20,12 +21,12 @@ const getResumeFromS3 = async (event, context) => {
   
   const s3Params = {
     Bucket: resumeBucket,
-    Key: 'Ryan Token Resume.pdf',
-    Expires: 604800 // max 7 days
+    Key: 'Ryan Token Resume.pdf'
   }
+  const s3GetSignedUrlCommand = new GetObjectCommand(s3Params)
   
   try {
-    const signedUrlForResume = s3.getSignedUrl("getObject", s3Params)
+    const signedUrlForResume = await getSignedUrl(s3Client, s3GetSignedUrlCommand, { expiresIn: 604800 })
     response.body = signedUrlForResume
   } catch(err) {
     console.error('error getting signed URL for resume:', err)
