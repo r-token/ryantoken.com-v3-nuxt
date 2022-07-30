@@ -7,6 +7,10 @@
     .find()
 
   const tag = computed(() => {
+    if (!route.params.tag) {
+      return ''
+    }
+    
     switch ((route.params.tag).toLowerCase()) {
       case 'swiftui':
         return 'SwiftUI'

@@ -1,7 +1,7 @@
 <script setup>
   import IconShowSidebar from '~icons/zondicons/show-sidebar'
   
-  const emit = defineEmits(["toggleSidebar", "updateCurrentPageFromTopbar"])
+  const emit = defineEmits(["toggleSidebar", "updateSelectedPageFromTopbar"])
   const toggleSidebar = () => emit("toggleSidebar", true)
   const updateSelectedPage = () => emit("updateSelectedPageFromTopbar", "index")
 </script>

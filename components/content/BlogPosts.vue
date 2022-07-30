@@ -9,7 +9,7 @@
   <div>
     <LargeHeader text="Blog"/>
 
-    <Subheader text="Everything I've ever written online."/>
+    <Subheader text="All blog posts."/>
 
     <ul class="grid gap-6 grid-cols-1 xl:grid-cols-2">
       <li v-for="{ _path: slug, title, description, date, image, imageAlt, tags } in allBlogPosts" :key="slug">
