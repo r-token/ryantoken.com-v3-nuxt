@@ -8,6 +8,6 @@
 
 <template>
   <NuxtLink :to="url" class="m-auto w-full" target="_blank">
-    <nuxt-img :src="src" :alt="altText" class="p-2 rounded-2xl" />
+    <img :src="src" :alt="altText" class="p-2 rounded-2xl" />
   </NuxtLink>
 </template>
