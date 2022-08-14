@@ -21,6 +21,7 @@
   ])
   
   const myProjects = ref([
+    { href: 'https://apps.apple.com/us/app/outrank/id1588983785', label: 'HLF' },
     { href: 'https://apps.apple.com/us/app/outrank/id1588983785', label: 'Outrank' },
     { href: 'https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550', label: 'CatchUp' },
     { href: 'https://podcasts.apple.com/us/podcast/the-golden-hurricast/id1435008302?mt=2', label: 'Hurricast' },
@@ -141,14 +142,17 @@
                 <NuxtLink :to="navItem.href" target="_blank" @click="updateSelectedPageAndToggleSidebar(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
                   <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
                     <div class="mr-3 mt-0.5">
+                      <div v-if="navItem.label === 'HLF'">
+                        <img src="/site-images/hlf/hlf-64.png" alt="Hot Local Food app icon" class="rounded w-8" />
+                      </div>
                       <div v-if="navItem.label === 'Outrank'">
                         <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded w-11" />
                       </div>
                       <div v-else-if="navItem.label === 'CatchUp'">
-                        <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded w-11" />
+                        <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded w-12" />
                       </div>
                       <div v-else-if="navItem.label === 'Hurricast'">
-                        <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded w-11" />
+                        <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded w-12" />
                       </div>
                     </div>  
                     
@@ -263,14 +267,17 @@
         <NuxtLink :to="navItem.href" target="_blank" @click="updateSelectedPage(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
             <div class="mr-3 mt-0.5">
+              <div v-if="navItem.label === 'HLF'">
+                <img src="/site-images/hlf/hlf-64.png" alt="Hot Local Food app icon" class="rounded w-8" />
+              </div>
               <div v-if="navItem.label === 'Outrank'">
                 <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded w-11" />
               </div>
               <div v-else-if="navItem.label === 'CatchUp'">
-                <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded w-11" />
+                <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded w-12" />
               </div>
               <div v-else-if="navItem.label === 'Hurricast'">
-                <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded w-11" />
+                <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded w-12" />
               </div>
             </div>  
             

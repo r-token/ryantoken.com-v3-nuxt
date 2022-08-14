@@ -15,6 +15,33 @@
     <div class="flex items-stretch mb-8">
       <ResizableImage class="w-2/3 xl:w-1/3 lg:w-1/3" src="/site-images/bmc-button.png" altText="Buy Me a Coffee button" url="https://www.buymeacoffee.com/ryantoken"/>
     </div>
+    
+    <hr class="mb-8" />
+    
+    <Header class="text-2xl" text="Hot Local Food"/>
+    
+    <div class="flex items-stretch mb-4">
+      <ResizableImage src="/site-images/hlf/hlf-icon.png" altText="Hot Local Food's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+    </div>
+    
+    <p class="mb-4">Hot Local Food is an iOS app that gives you a fun way to find your next place to eat.</p>
+    
+    <p class="mb-4">Available on iOS, iPadOS, and macOS (on M1/M2 Macs), it tracks forty-seven different stats for all 130 Divison One FBS teams and lets you dissect and compare them however you'd like. You can even compare two teams side-by-side to preview an intriguing matchup.</p>
+    
+    <div class="flex items-stretch mb-4 max-w-5xl">
+      <ResizableImage class="w-1/4" src="/site-images/outrank/outrank-rankings.png" altText="Outrank's rankings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+      <ResizableImage class="w-1/4" src="/site-images/outrank/outrank-detail.png" altText="Outrank's details screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+      <ResizableImage class="w-1/4" src="/site-images/outrank/outrank-compare.png" altText="Outrank's comparison screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+      <ResizableImage class="w-1/4" src="/site-images/outrank/outrank-settings.png" altText="Outrank's settings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+    </div>
+    
+    <p class="mb-4">Hot Local Food is built with 100% <ExternalLink url="https://developer.apple.com/xcode/swiftui/" text="SwiftUI" />.</p>
+    
+    <p class="mb-4">I use <ExternalLink url="https://developer.apple.com/icloud/cloudkit/" text="CloudKit"/> to securely sync data between your devices. I don't store any of your location data or personal data of any kind. Take a look at my <NuxtLink class="text-indigo-500 dark:text-sky-300" to="/privacy-policy">privacy policy</NuxtLink> for more information.</p>
+    
+    <p class="mb-8">You can follow <ExternalLink url="https://twitter.com/OutrankApp" text="Outrank on Twitter" />, and you can read my blog post about building Outrank <ExternalLink url="https://www.ryantoken.com/blog/introducing-outrank/" text="here"/>.</p>
+    
+    <a class="mb-8" href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;"></a>
 
     <hr class="mb-8" />
 
@@ -26,7 +53,7 @@
 
     <p class="mb-4">Outrank is an app to help you check how your favorite FBS college football teams stack up against the rest.</p>
 
-    <p class="mb-4">Available on iOS, iPadOS, and macOS (on M1/M2 Macs), it tracks forty-seven different stats for all 130 Divison One FBS teams and lets you dissect and compare them however you'd like. You can even compare two teams side-by-side to preview an intriguing matchup.</p>
+    <p class="mb-4">Available on iOS, iPadOS, and macOS (on M1/M2 Macs), it tracks forty-seven different stats for all 130 Division One FBS teams and lets you dissect and compare them however you'd like. You can even compare two teams side-by-side to preview an intriguing matchup.</p>
 
     <div class="flex items-stretch mb-4 max-w-5xl">
       <ResizableImage class="w-1/4" src="/site-images/outrank/outrank-rankings.png" altText="Outrank's rankings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
@@ -37,7 +64,7 @@
 
     <p class="mb-4">Outrank is built with 100% <ExternalLink url="https://developer.apple.com/xcode/swiftui/" text="SwiftUI" />.</p>
 
-    <p class="mb-4">On the back-end, it leverages <ExternalLink url="https://developer.apple.com/icloud/cloudkit/" text="CloudKit"/> as well as various AWS services including <ExternalLink url="https://aws.amazon.com/dynamodb/" text="DynamoDB"/>,  <ExternalLink url="https://aws.amazon.com/api-gateway/" text="API Gateway"/>, and  <ExternalLink url="https://aws.amazon.com/lambda/" text="Lambda"/>.</p>
+    <p class="mb-4">On the back-end, it leverages <ExternalLink url="https://developer.apple.com/icloud/cloudkit/" text="CloudKit"/> as well as various AWS services including <ExternalLink url="https://aws.amazon.com/dynamodb/" text="DynamoDB"/>,  <ExternalLink url="https://aws.amazon.com/api-gateway/" text="API Gateway"/>, and  <ExternalLink url="https://aws.amazon.com/lambda/" text="Lambda"/>. I don't store any of your data. Take a look at my <NuxtLink class="text-indigo-500 dark:text-sky-300" to="/privacy-policy">privacy policy</NuxtLink> for more information.</p>
 
     <p class="mb-8">You can follow <ExternalLink url="https://twitter.com/OutrankApp" text="Outrank on Twitter" />, and you can read my blog post about building Outrank <ExternalLink url="https://www.ryantoken.com/blog/introducing-outrank/" text="here"/>.</p>
 
@@ -105,7 +132,7 @@
 
     <p class="mb-4">CatchUp helps you stay in touch with the people who matter most. You can set reminders for the contacts you choose, and get notified when it's time to CatchUp with them again.</p>
 
-    <p class="mb-4">CatchUp is free with no ads, but has a tip jar if you want to buy me a coffee ☕</p>
+    <p class="mb-4">I don't store any of your contacts data or personal data of any kind. Take a look at my <NuxtLink class="text-indigo-500 dark:text-sky-300" to="/privacy-policy">privacy policy</NuxtLink> for more information. CatchUp is free with no ads, but has a tip jar if you want to buy me a coffee ☕</p>
 
     <p class="mb-8">Read my blog post about modernizing CatchUp <ExternalLink url="https://ryantoken.com/blog/catching-up" text="here"/>.</p>
 
