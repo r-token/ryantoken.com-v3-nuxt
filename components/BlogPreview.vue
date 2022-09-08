@@ -24,7 +24,7 @@
 </script>
 
 <template>
-  <div class="mx-auto max-w-xs rounded-3xl border border-gray-200 dark:border-slate-700 shadow-xl bg-slate-50 dark:bg-slate-700 overflow-hidden mb-6 md:max-w-2xl">
+  <div class="mx-auto max-w-xs sm:max-w-xs md:max-w-full lg:max-w-full xl:max-w-full rounded-3xl border border-gray-200 dark:border-slate-700 shadow-xl bg-slate-50 dark:bg-slate-700 overflow-hidden mb-6">
     <div class="cursor-pointer" @click="navigate(slug)">
       <div class="md:flex">
         <div class="md:shrink-0 max-w-xs max-h-xs">
