@@ -1,4 +1,8 @@
-<script setup lang="ts">
+<script setup>
+  useHead({
+    title: 'Ryan Token - Blog'
+  })
+  
   const allBlogPosts = await queryContent('/blog')
     .sort({ date: -1 }) // show latest articles first
     .where({ _partial: false }) // exclude the Partial files
