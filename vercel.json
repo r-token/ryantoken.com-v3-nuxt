@@ -1,0 +1,10 @@
+{
+	"buildCommand": "npx nuxi generate",
+	"outputDirectory": ".output/public",
+	"redirects": [
+		{
+			"source": "/*",
+			"destination": "/index.html"
+		}
+	]
+}
