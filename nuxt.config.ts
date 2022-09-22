@@ -3,6 +3,7 @@ import Icons from 'unplugin-icons/vite'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   target: 'static',
+  ssr: false,
   
   modules: [
     '@nuxt/content',
@@ -40,6 +41,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
+      preset: 'service-worker',
       routes: ['/sitemap.xml']
     }
   }
