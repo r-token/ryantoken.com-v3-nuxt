@@ -17,7 +17,6 @@
       v-slot="{ doc }"
       :path="$route.params.slug ? `/blog/${$route.params.slug[0]}` : '/blog'"
     > 
-      <!-- <TableOfContents :doc=doc /> -->
       <ContentRenderer class="prose prose-sm sm:prose lg:prose-lg dark:prose-invert dark:prose-sm-invert dark:sm:prose-invert dark:lg:prose-lg-invert" :value="doc" />
     </ContentDoc>
   </div>
