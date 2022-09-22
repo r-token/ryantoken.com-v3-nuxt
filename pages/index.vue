@@ -1,4 +1,8 @@
 <script setup>
+  useHead({
+    title: 'Ryan Token'
+  })
+  
   const config = useRuntimeConfig()
   const { data: signedUrlForCv, refresh } = await useFetch(`${config.public.customApiBase}/cv`)
 
@@ -7,10 +11,6 @@
     .where({ _partial: false }) // exclude the Partial files
     .limit(4)
     .find()
-    
-  useHead({
-    title: 'Ryan Token'
-  })
 </script>
 
 <template>
