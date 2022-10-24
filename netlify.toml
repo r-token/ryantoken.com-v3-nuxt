@@ -4,7 +4,8 @@
 
 [build]
 	publish = "dist"
-	command = "nuxt build"
+	command = "npx nuxt build"
+  /# command = "npx nuxi generate" for ssg
 
 [[redirects]]
 	from = "/*"
