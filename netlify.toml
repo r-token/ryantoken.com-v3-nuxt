@@ -2,6 +2,10 @@
 	NPM_FLAGS = "--version"
 	NODE_VERSION = "16"
 
+[build]
+	publish = "dist"
+	command = "npx nuxi build"
+
 [[redirects]]
 	from = "/*"
 	to = "/index.html"
