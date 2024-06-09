@@ -36,7 +36,7 @@ export default defineNuxtConfig({
     ]
   },
 
-  ssr: false,
+  ssr: true,
   nitro: {
     prerender: {
       routes: ['/sitemap.xml'],
