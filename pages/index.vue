@@ -21,11 +21,11 @@
     </p>
 
     <p class="text-gray-600 dark:text-gray-400 mb-4">
-      I'm <ExternalLink to="https://ryan-token-cv-prod.s3.us-east-2.amazonaws.com/Ryan+Token+CV.pdf" text="currently" /> a full-stack software engineer at <ExternalLink url="https://new.trystoryboard.com" text="Storyboard" />. My primary focus there is on <ExternalLink url="https://www.serverless.com/framework" text="serverless web apps" />, but I build software that touches every part of the company.
+      I'm <ExternalLink to="https://ryan-token-cv-prod.s3.us-east-2.amazonaws.com/Ryan+Token+CV.pdf" text="currently" /> a software engineer at <ExternalLink url="https://storyboard.com" text="Storyboard" />. My primary focus there is building <ExternalLink url="https://apps.apple.com/us/app/chat-by-storyboard/id1662743814" text="Chat by Storyboard" />, our hands-free, eyes-free voice messaging app for drivers. I also help create highly scalable <ExternalLink url="https://aws.amazon.com/serverless/" text="serverless" /> back ends that power every part of the platform.
     </p>
     
     <p class="text-gray-600 dark:text-gray-400 mb-6">
-      In my free time, I build native iOS apps (<ExternalLink url="https://apps.apple.com/us/app/outrank/id1588983785" text="Outrank" /> and <ExternalLink url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" text="CatchUp" />) and co-host <ExternalLink url="https://thegoldenhurricast.com" text="The Golden Hurricast" />, a weekly podcast covering athletics at The University of Tulsa.
+      In my free time, I build native iOS apps (<ExternalLink url="https://apps.apple.com/us/app/hot-local-food/id1621818779" text="Hot Local Food" />, <ExternalLink url="https://apps.apple.com/us/app/outrank/id1588983785" text="Outrank" />, and <ExternalLink url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" text="CatchUp" />) and co-host <ExternalLink url="https://thegoldenhurricast.com" text="The Golden Hurricast" />, a weekly podcast covering athletics at The University of Tulsa.
     </p>
 
     <h1 class="text-xl font-bold mb-6">Latest blog posts</h1>

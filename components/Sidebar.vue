@@ -7,6 +7,7 @@
   import IconMeta from '~icons/octicon/stack-24'
   import IconExperimentation from '~icons/icon-park-solid/experiment-one'
   import IconTwitter from '~icons/logos/twitter'
+  import IconMastodon from '~icons/logos/mastodon-icon'
   import IconGitHub from '~icons/mdi/github'
   import IconLinkedIn from '~icons/mdi/linkedin'
   import IconEmail from '~icons/ic/baseline-email'
@@ -21,6 +22,7 @@
   ])
   
   const myProjects = ref([
+    { href: 'https://apps.apple.com/us/app/hot-local-food/id1621818779', label: 'HLF' },
     { href: 'https://apps.apple.com/us/app/outrank/id1588983785', label: 'Outrank' },
     { href: 'https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550', label: 'CatchUp' },
     { href: 'https://podcasts.apple.com/us/podcast/the-golden-hurricast/id1435008302?mt=2', label: 'Hurricast' },
@@ -28,6 +30,7 @@
   
   const externalNavigationLinks = ref([
     { href: 'https://twitter.com/_ryantoken', label: 'Twitter' },
+    { href: 'https://indieweb.social/@ryantoken', label: 'Mastodon' },
     { href: 'https://github.com/r-token', label: 'GitHub' },
     { href: 'https://linkedin.com/in/ryantoken', label: 'LinkedIn' },
     { href: 'mailto:ryantoken13@gmail.com', label: 'Email' },
@@ -141,6 +144,9 @@
                 <NuxtLink :to="navItem.href" target="_blank" @click="updateSelectedPageAndToggleSidebar(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
                   <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
                     <div class="mr-3 mt-0.5">
+                      <div v-if="navItem.label === 'HLF'">
+                        <img src="/site-images/hot-local-food/hlf-64.png" alt="Hot Local Food app icon" class="rounded w-11" />
+                      </div>
                       <div v-if="navItem.label === 'Outrank'">
                         <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded w-11" />
                       </div>
@@ -173,6 +179,9 @@
                     <div class="mr-3 mt-0.5">
                       <div v-if="navItem.label === 'Twitter'">
                         <IconTwitter />
+                      </div>
+                      <div v-else-if="navItem.label === 'Mastodon'">
+                        <IconMastodon/>
                       </div>
                       <div v-else-if="navItem.label === 'GitHub'">
                         <IconGitHub class="text-black dark:text-white" />
@@ -263,6 +272,9 @@
         <NuxtLink :to="navItem.href" target="_blank" @click="updateSelectedPage(navItem.label)" class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300" :class="isCurrentPage(navItem.label) ? selectedBackground : normalBackground">
             <div class="mr-3 mt-0.5">
+              <div v-if="navItem.label === 'HLF'">
+                <img src="/site-images/hot-local-food/hlf-64.png" alt="Hot Local Food app icon" class="rounded w-11" />
+              </div>
               <div v-if="navItem.label === 'Outrank'">
                 <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded w-11" />
               </div>
@@ -295,6 +307,9 @@
             <div class="mr-3 mt-0.5">
               <div v-if="navItem.label === 'Twitter'">
                 <IconTwitter />
+              </div>
+              <div v-else-if="navItem.label === 'Mastodon'">
+                <IconMastodon />
               </div>
               <div v-else-if="navItem.label === 'GitHub'">
                 <IconGitHub class="text-black dark:text-white" />

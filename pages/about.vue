@@ -21,9 +21,9 @@
     </p>
     
     <div class="flex items-stretch mb-4">
-      <ResizableImage src="/site-images/outrank/outrank-icon.png" altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+      <ResizableImage src="/site-images/hot-local-food/hlf-icon.png" altText="Hot Local Food's app icon" url="https://apps.apple.com/us/app/hot-local-food/id1621818779"/>
       <ResizableImage src="/site-images/hurricast/hurricast-icon.jpg" altText="The Golden Hurricast's logo" url="https://thegoldenhurricast.com"/>
-      <ResizableImage src="/site-images/catchup/catchup-icon.png" altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
+      <ResizableImage src="/site-images/outrank/outrank-icon.png" altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
     </div>
 
     <p class="mb-4">
