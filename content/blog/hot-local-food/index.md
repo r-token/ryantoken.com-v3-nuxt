@@ -27,7 +27,7 @@ head:
 
 <!--more-->
 
-January  26, 2023
+January 26, 2023
 
 ---
 
