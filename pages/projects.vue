@@ -47,7 +47,7 @@
     
     <p class="mb-4">Hot Local Food is built with 100% <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>, and it uses <a href="https://developer.apple.com/icloud/cloudkit/" target="_blank" rel="noreferrer">CloudKit</a> as a back end to enable syncing between iOS devices.</p>
     
-    <p class="mb-8">You can follow <a href="https://twitter.com/HotLocalFood" target="_blank" rel="noreferrer">Hot Local Food on Twitter</a>, check out its <a href="https://www.hotlocalfood.app" target="_blank" rel="noreferrer">marketing website</a>, or read my <a href="/blog/hot-local-food/" rel="noreferrer">blog post</a> about building it.</p>
+    <p class="mb-8">You can follow <a href="https://twitter.com/HotLocalFood" target="_blank" rel="noreferrer">Hot Local Food on Twitter</a>, check out its <a href="https://www.hotlocalfood.app" target="_blank" rel="noreferrer">marketing website</a>, or read my <NuxtLink to="/blog/hot-local-food/" class="text-indigo-500 dark:text-sky-300">blog post</NuxtLink> about building it.</p>
     
     <a href="https://apps.apple.com/us/app/hot-local-food/id1621818779?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1674691200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
     
@@ -76,7 +76,7 @@
 
     <p class="mb-4">On the back-end, it leverages <ExternalLink url="https://developer.apple.com/icloud/cloudkit/" text="CloudKit"/> as well as various AWS services including <ExternalLink url="https://aws.amazon.com/dynamodb/" text="DynamoDB"/>,  <ExternalLink url="https://aws.amazon.com/api-gateway/" text="API Gateway"/>, and  <ExternalLink url="https://aws.amazon.com/lambda/" text="Lambda"/>.</p>
 
-    <p class="mb-8">You can follow <ExternalLink url="https://twitter.com/OutrankApp" text="Outrank on Twitter" />, and you can read my blog post about building Outrank <ExternalLink url="https://www.ryantoken.com/blog/introducing-outrank/" text="here"/>.</p>
+    <p class="mb-8">You can follow <ExternalLink url="https://twitter.com/OutrankApp" text="Outrank on Twitter" />, and you can read my blog post about building Outrank <NuxtLink to="/blog/introducing-outrank/" class="text-indigo-500 dark:text-sky-300">here</NuxtLink>.</p>
 
     <a href="https://apps.apple.com/us/app/outrank/id1588983785?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1635206400" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
     
@@ -92,7 +92,7 @@
     
     <p class="italic mb-4">*Featured on Brett Terpstra's <a href="https://systematicpod.com/ep/218" target="_blank" rel="noreferrer">Systematic</a> Podcast as one of his 'Top 3' picks (around 46:21)</p>
     
-    <p class="mb-4">My first public-facing iOS app! First released in May 2018. I completely rewrote it in May of 2020 using <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a> and <a href="https://developer.apple.com/documentation/coredata" target="_blank" rel="noreferrer">Core Data</a>, then shipped a large update in 2024 with <a href="https://developer.apple.com/documentation/swiftdata" target="_blank" rel="noreferrer">SwiftData</a> and <a href="/blog/catchup-v3" target="_blank" rel="noreferrer">several new features</a>. It also runs well on iPadOS and macOS and syncs data between them.</p>
+    <p class="mb-4">My first public-facing iOS app! First released in May 2018. I completely rewrote it in May of 2020 using <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a> and <a href="https://developer.apple.com/documentation/coredata" target="_blank" rel="noreferrer">Core Data</a>, then shipped a large update in 2024 with <a href="https://developer.apple.com/documentation/swiftdata" target="_blank" rel="noreferrer">SwiftData</a> and <NuxtLink to="/blog/catchup-v3/" class="text-indigo-500 dark:text-sky-300">several new features</NuxtLink>. It also runs well on iPadOS and macOS and syncs data between them.</p>
     
     <p class="mb-4">CatchUp helps you stay in touch with the people who matter most. You can set reminders for the contacts you choose, and get notified when it's time to CatchUp with them again.</p>
     
@@ -102,7 +102,7 @@
     
     <p class="mb-4">CatchUp is free with no ads, but has an in-app tip jar if you want to buy me a coffee ☕</p>
     
-    <p class="mb-8">Read my blog post about modernizing CatchUp with SwiftUI <a href="/blog/catching-up" target="_blank" rel="noreferrer">here</a> or my latest post about releasing version 3.0 <a href="/blog/catchup-v3" target="_blank" rel="noreferrer">here</a>.</p>
+    <p class="mb-8">Read my blog post about modernizing CatchUp with SwiftUI <NuxtLink to="/blog/catching-up/" class="text-indigo-500 dark:text-sky-300">here</NuxtLink> or my latest post about releasing version 3.0 <NuxtLink to="/blog/catchup-v3/" class="text-indigo-500 dark:text-sky-300">here</NuxtLink>.</p>
     
     <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1526515200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
     

@@ -12,7 +12,7 @@
 
     <hr class="mb-6" />
 
-    <p class="mb-4">This is a <ExternalLink url="https://jamstack.org" text="Jamstack"/> website created with <ExternalLink url="https://vuejs.org" text="Vue"/>, <ExternalLink url="https://nuxtjs.org" text="Nuxt 3"/>, and <ExternalLink url="https://tailwindcss.com" text="Tailwind"/>. It's all hosted on <ExternalLink url="https://netlify.com" text="Netlify"/>.</p>
+    <p class="mb-4">This is a <ExternalLink url="https://jamstack.org" text="Jamstack"/> website created with <ExternalLink url="https://vuejs.org" text="Vue"/>, <ExternalLink url="https://nuxtjs.org" text="Nuxt 3"/>, and <ExternalLink url="https://tailwindcss.com" text="Tailwind"/>. It's all hosted on <ExternalLink url="https://vercel.com" text="Vercel"/>.</p>
 
     <p class="mb-4">The blog is generated with <ExternalLink url="https://content.nuxtjs.org" text="Nuxt Content"/> and <ExternalLink url="https://content.nuxtjs.org/guide/writing/markdown" text="Markdown"/>.</p>
     
