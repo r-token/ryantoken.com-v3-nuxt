@@ -15,6 +15,43 @@
     <div class="flex items-stretch mb-8">
       <ResizableImage class="w-2/3 xl:w-1/3 lg:w-1/3" src="/site-images/bmc-button.png" altText="Buy Me a Coffee button" url="https://www.buymeacoffee.com/ryantoken"/>
     </div>
+    
+    <hr class="mb-8" />
+    
+    <Header text="Hot Local Food"/>
+    
+    <div class="flex items-stretch mb-4">
+      <ResizableImage src="/site-images/hot-local-food/hlf-icon.png" altText="Hot Local Food's app icon" url="https://apps.apple.com/us/app/hot-local-food/id1621818779"/>
+    </div>
+    
+    <p class="mb-4">Think Tinder, but for food, and it already likes you back. Say hello to <b>Hot Local Food</b>. Free, hot, and available on iOS 15 and newer.</p>
+    
+    <p class="mb-4">Want something to eat or drink but don't know where to go? Want to explore the local scene nearby or far away? Just want to look at some good pictures of good food? Hot Local Food is there for you.</p>
+    
+    <p class="mb-4">With a photo-heavy, Tinder-style swipe interface, an extensive library of restaurants powered by <a href="https://fusion.yelp.com/" target="_blank" rel="noreferrer">Yelp</a>, and slick features built on top, Hot Local Food will help you find exactly what you need.</p>
+    
+    <ResizableImage src="/site-images/hot-local-food/hlf-primary-light.png" altText="Hot Local Food screenshots" url="https://apps.apple.com/us/app/hot-local-food/id1621818779"/>
+    
+    <br />
+    
+    <p>Features:</p>
+    <ul class="list-disc ml-8 mb-4">
+      <li>When you’re out, see restaurants nearby and swipe until you find your perfect match</li>
+      <li>Traveling somewhere? Get to know what’s good by swiping in the area you plan to visit</li>
+      <li>Filter by price, location, and categories</li>
+      <li>Create custom lists to save places for later</li>
+      <li>Access quick shortcuts to make reservations, order delivery or pickup, and find directions</li>
+    </ul>
+    
+    <p class="mb-4">For vegans, carnivores, and everyone in between, Hot Local Food is the best place to find what you love, so you can eat it.</p>
+    
+    <p class="mb-4">Hot Local Food is built with 100% <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>, and it uses <a href="https://developer.apple.com/icloud/cloudkit/" target="_blank" rel="noreferrer">CloudKit</a> as a back end to enable syncing between iOS devices.</p>
+    
+    <p class="mb-8">You can follow <a href="https://twitter.com/HotLocalFood" target="_blank" rel="noreferrer">Hot Local Food on Twitter</a>, check out its <a href="https://www.hotlocalfood.app" target="_blank" rel="noreferrer">marketing website</a>, or read my <a href="/blog/hot-local-food/" rel="noreferrer">blog post</a> about building it.</p>
+    
+    <a href="https://apps.apple.com/us/app/hot-local-food/id1621818779?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1674691200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
+    
+    <br /> <br /> <br />
 
     <hr class="mb-8" />
 
@@ -41,7 +78,35 @@
 
     <p class="mb-8">You can follow <ExternalLink url="https://twitter.com/OutrankApp" text="Outrank on Twitter" />, and you can read my blog post about building Outrank <ExternalLink url="https://www.ryantoken.com/blog/introducing-outrank/" text="here"/>.</p>
 
-    <a class="mb-8" href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;"></a>
+    <a href="https://apps.apple.com/us/app/outrank/id1588983785?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1635206400" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
+    
+    <br /> <br /> <br />
+    
+    <hr class="mb-8"/>
+    
+    <Header text="CatchUp - Keep in Touch"/>
+    
+    <div class="flex items-stretch mb-4">
+      <ResizableImage src="site-images/catchup/catchup-icon.png" altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
+    </div>
+    
+    <p class="italic mb-4">*Featured on Brett Terpstra's <a href="https://systematicpod.com/ep/218" target="_blank" rel="noreferrer">Systematic</a> Podcast as one of his 'Top 3' picks (around 46:21)</p>
+    
+    <p class="mb-4">My first public-facing iOS app! First released in May 2018. I completely rewrote it in May of 2020 using <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a> and <a href="https://developer.apple.com/documentation/coredata" target="_blank" rel="noreferrer">Core Data</a>, then shipped a large update in 2024 with <a href="https://developer.apple.com/documentation/swiftdata" target="_blank" rel="noreferrer">SwiftData</a> and <a href="/blog/catchup-v3" target="_blank" rel="noreferrer">several new features</a>. It also runs well on iPadOS and macOS and syncs data between them.</p>
+    
+    <p class="mb-4">CatchUp helps you stay in touch with the people who matter most. You can set reminders for the contacts you choose, and get notified when it's time to CatchUp with them again.</p>
+    
+    <div class="flex items-stretch mb-4">
+      <ResizableImage src="/site-images/catchup/catchup-home.jpeg" altText="CatchUp screenshot" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
+    </div>
+    
+    <p class="mb-4">CatchUp is free with no ads, but has an in-app tip jar if you want to buy me a coffee ☕</p>
+    
+    <p class="mb-8">Read my blog post about modernizing CatchUp with SwiftUI <a href="/blog/catching-up" target="_blank" rel="noreferrer">here</a> or my latest post about releasing version 3.0 <a href="/blog/catchup-v3" target="_blank" rel="noreferrer">here</a>.</p>
+    
+    <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1526515200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
+    
+    <br /> <br /> <br />
 
     <hr class="mb-8" />
 
@@ -90,26 +155,6 @@
     <p class="mb-4">I was the sole developer for this project. As a volunteer, I ended up building the entire application in a span of three weeks.</p>
 
     <p class="mb-8">We had about three hundred users throughout the city and had no incidents throughout the event.</p>
-
-    <hr class="mb-8"/>
-
-    <Header class="text-2xl" text="CatchUp - Keep in Touch"/>
-
-    <div class="flex items-stretch mb-4">
-      <ResizableImage src="/site-images/catchup/catchup-icon.png" altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
-    </div>
-
-    <p class="italic mb-4">*Featured on Brett Terpstra's <ExternalLink url="https://systematicpod.com/ep/218" text="Systematic"/> Podcast as one of his 'Top 3' picks (around 46:21)</p>
-
-    <p class="mb-4">My first public-facing iOS app! First released in May of 2018, I completely rewrote it in May of 2020 using <ExternalLink url="https://developer.apple.com/xcode/swiftui/" text="SwiftUI"/>, <ExternalLink url="https://developer.apple.com/documentation/coredata" text="Core Data"/>, and several other improvements.</p>
-
-    <p class="mb-4">CatchUp helps you stay in touch with the people who matter most. You can set reminders for the contacts you choose, and get notified when it's time to CatchUp with them again.</p>
-
-    <p class="mb-4">CatchUp is free with no ads, but has a tip jar if you want to buy me a coffee ☕</p>
-
-    <p class="mb-8">Read my blog post about modernizing CatchUp <ExternalLink url="https://ryantoken.com/blog/catching-up" text="here"/>.</p>
-
-    <a class="mb-8" href="https://itunes.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;"></a>
-
+    
   </div>
 </template>
